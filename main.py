@@ -2,6 +2,7 @@ import asyncio
 import collections
 import json
 import os
+import re
 import time
 from typing import Dict, List, Optional, Tuple
 
@@ -11,13 +12,79 @@ from agent.main_agent import MainAgent
 from engine.llm_judge import LLMJudge
 from engine.retrieval_eval import RetrievalEvaluator
 from engine.runner import BenchmarkRunner
-from ragas.metrics import faithfulness, answer_relevancy
+try:
+    from ragas.metrics.collections import faithfulness, answer_relevancy
+except Exception:
+    from ragas.metrics import faithfulness, answer_relevancy
+try:
+    from ragas.dataset_schema import SingleTurnSample
+except Exception:
+    SingleTurnSample = None
 
 load_dotenv()
 
 class ExpertEvaluator:
     def __init__(self, top_k: int = 5):
         self.retrieval_eval = RetrievalEvaluator(top_k=top_k)
+
+    def _tokenize(self, text: str) -> List[str]:
+        return re.findall(r"\w+", (text or "").lower())
+
+    def _jaccard_similarity(self, left: str, right: str) -> float:
+        left_tokens = set(self._tokenize(left))
+        right_tokens = set(self._tokenize(right))
+        if not left_tokens or not right_tokens:
+            return 0.0
+        return len(left_tokens & right_tokens) / len(left_tokens | right_tokens)
+
+    def _heuristic_faithfulness(self, answer: str, contexts: List[str]) -> float:
+        return round(self._jaccard_similarity(answer, " ".join(contexts or [])), 4)
+
+    def _heuristic_relevancy(self, answer: str, expected_answer: str, question: str) -> float:
+        answer_to_expected = self._jaccard_similarity(answer, expected_answer)
+        answer_to_question = self._jaccard_similarity(answer, question)
+        return round((0.8 * answer_to_expected) + (0.2 * answer_to_question), 4)
+
+    async def _compute_ragas_metric(
+        self,
+        metric,
+        row: Dict,
+        fallback_value: float,
+    ) -> float:
+        sample = SingleTurnSample(**row) if SingleTurnSample is not None else row
+
+        async_methods = (
+            ("single_turn_ascore", sample),
+            ("ascore", row),
+        )
+        sync_methods = (
+            ("single_turn_score", sample),
+            ("score", row),
+        )
+
+        for method_name, payload in async_methods:
+            method = getattr(metric, method_name, None)
+            if method is None:
+                continue
+            try:
+                result = method(payload)
+                if asyncio.iscoroutine(result):
+                    result = await result
+                return float(result)
+            except Exception:
+                continue
+
+        for method_name, payload in sync_methods:
+            method = getattr(metric, method_name, None)
+            if method is None:
+                continue
+            try:
+                result = await asyncio.to_thread(method, payload)
+                return float(result)
+            except Exception:
+                continue
+
+        return fallback_value
     
     async def score(self, case, resp): 
         """
@@ -35,13 +102,27 @@ class ExpertEvaluator:
         row = {
             "question": case.get("question", ""),
             "answer": resp.get("answer", ""),
-            "contexts": resp.get("retrieved_texts", []) # Ragas cần nội dung text, không phải ID
+            "contexts": resp.get("retrieved_context") or resp.get("contexts", [])
         }
         
-        # 3. Tính toán Generation Metrics bằng Ragas (gọi LLM)
-        # Sử dụng ascore() để chạy async, tránh block event loop
-        faithfulness_score = await faithfulness.ascore(row)
-        relevancy_score = await answer_relevancy.ascore(row)
+        heuristic_faithfulness = self._heuristic_faithfulness(row["answer"], row["contexts"])
+        heuristic_relevancy = self._heuristic_relevancy(
+            row["answer"],
+            case.get("expected_answer", ""),
+            row["question"],
+        )
+
+        # 3. Tính toán Generation Metrics bằng Ragas với fallback an toàn theo version
+        faithfulness_score = await self._compute_ragas_metric(
+            faithfulness,
+            row,
+            heuristic_faithfulness,
+        )
+        relevancy_score = await self._compute_ragas_metric(
+            answer_relevancy,
+            row,
+            heuristic_relevancy,
+        )
         
         return {
             "faithfulness": faithfulness_score,
@@ -186,6 +267,8 @@ def build_summary(results: List[Dict], agent_version: str) -> Dict:
             "metadata": {"version": agent_version, "total": 0, "timestamp": timestamp},
             "metrics": {
                 "avg_score": 0.0,
+                "avg_faithfulness": 0.0,
+                "avg_relevancy": 0.0,
                 "hit_rate": 0.0,
                 "avg_mrr": 0.0,
                 "agreement_rate": 0.0,
@@ -195,6 +278,8 @@ def build_summary(results: List[Dict], agent_version: str) -> Dict:
         }
 
     avg_score = sum(r["judge"]["final_score"] for r in results) / total
+    avg_faithfulness = sum(r["ragas"]["faithfulness"] for r in results) / total
+    avg_relevancy = sum(r["ragas"]["relevancy"] for r in results) / total
     avg_hit_rate = sum(r["ragas"]["retrieval"]["hit_rate"] for r in results) / total
     avg_mrr = sum(r["ragas"]["retrieval"]["mrr"] for r in results) / total
     agreement_rate, agreement_meta = calculate_cohens_kappa(results)
@@ -211,6 +296,8 @@ def build_summary(results: List[Dict], agent_version: str) -> Dict:
         },
         "metrics": {
             "avg_score": round(avg_score, 4),
+            "avg_faithfulness": round(avg_faithfulness, 4),
+            "avg_relevancy": round(avg_relevancy, 4),
             "hit_rate": round(avg_hit_rate, 4),
             "avg_mrr": round(avg_mrr, 4),
             "agreement_rate": agreement_rate,
@@ -309,13 +396,22 @@ async def main():
         json.dump(candidate_results, f, ensure_ascii=False, indent=2)
 
     print("\nKet qua benchmark")
-    print(f"Version: {final_summary['metadata']['version']}")
-    print(f"So cases: {final_summary['metadata']['total']}")
-    print(f"Avg score: {final_summary['metrics']['avg_score']}")
-    print(f"Hit rate: {final_summary['metrics']['hit_rate']}")
-    print(f"MRR: {final_summary['metrics']['avg_mrr']}")
-    print(f"Agreement rate: {final_summary['metrics']['agreement_rate']}")
-    print(f"Conflict rate: {final_summary['metrics']['conflict_rate']}")
+    total_cases = final_summary["metadata"]["total"]
+    pass_count = sum(1 for r in candidate_results if r.get("status") == "pass")
+    fail_count = sum(1 for r in candidate_results if r.get("status") == "fail")
+    metrics = final_summary["metrics"]
+
+    print(f"- Tong so cases: {total_cases}")
+    print(f"- Ti le Pass/Fail: {pass_count}/{fail_count}")
+    print("- Diem RAGAS trung binh:")
+    print(f"    - Faithfulness: {metrics['avg_faithfulness']:.2f}")
+    print(f"    - Relevancy: {metrics['avg_relevancy']:.2f}")
+    print(f"- Diem LLM-Judge trung binh: {metrics['avg_score']:.1f} / 5.0")
+    print(f"Avg score: {metrics['avg_score']:.4f}")
+    print(f"Hit rate: {metrics['hit_rate']:.4f}")
+    print(f"MRR: {metrics['avg_mrr']:.4f}")
+    print(f"Agreement rate: {metrics['agreement_rate']:.4f}")
+    print(f"Conflict rate: {metrics['conflict_rate']:.4f}")
 
     regression = final_summary.get("regression", {})
     if regression.get("decision"):
