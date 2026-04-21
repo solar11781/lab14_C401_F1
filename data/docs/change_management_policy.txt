@@ -1,0 +1,41 @@
+CHÍNH SÁCH QUẢN LÝ THAY ĐỔI HỆ THỐNG
+Source: it/change-management-policy.md
+Department: IT
+Effective Date: 2026-02-05
+Access: internal
+
+=== Section 1: Mục đích ===
+Đảm bảo mọi thay đổi hệ thống được kiểm soát, giảm thiểu rủi ro downtime.
+
+=== Section 2: Phân loại change ===
+
+- Standard Change:
+  + Lặp lại, rủi ro thấp
+
+- Normal Change:
+  + Cần approval
+
+- Emergency Change:
+  + Áp dụng cho sự cố P1
+
+=== Section 3: Quy trình ===
+
+Bước 1: Tạo Change Request (CR)
+Bước 2: Đánh giá impact
+Bước 3: Phê duyệt
+Bước 4: Triển khai
+Bước 5: Review sau change
+
+=== Section 4: SLA ===
+
+- Standard: 1 ngày
+- Normal: 3 ngày
+- Emergency: ngay lập tức
+
+=== Section 5: Rollback ===
+
+- Mọi change phải có plan rollback
+- Thực hiện rollback nếu lỗi xảy ra
+
+=== Section 6: Liên hệ ===
+Email: it-change@company.internal

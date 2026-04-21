@@ -1,0 +1,42 @@
+CHÍNH SÁCH HOÀN ỨNG CHI PHÍ
+Source: finance/expense-policy.md
+Department: Finance
+Effective Date: 2026-01-20
+Access: internal
+
+=== Section 1: Phạm vi ===
+Áp dụng cho tất cả chi phí phát sinh phục vụ công việc.
+
+=== Section 2: Điều kiện hoàn ứng ===
+
+- Có hóa đơn hợp lệ (VAT nếu có)
+- Được Manager phê duyệt trước (nếu > 1 triệu)
+- Gửi claim trong vòng 30 ngày
+
+=== Section 3: Quy trình ===
+
+Bước 1: Tạo expense claim trên hệ thống
+Bước 2: Upload hóa đơn
+Bước 3: Manager approve
+Bước 4: Finance review và thanh toán
+
+=== Section 4: SLA xử lý ===
+
+- Finance xử lý: 3-5 ngày làm việc
+- Thanh toán: trong kỳ payroll gần nhất
+
+=== Section 5: Loại chi phí hợp lệ ===
+
+- Công tác phí
+- Chi phí ăn ở khi đi công tác
+- Phần mềm phục vụ công việc
+
+=== Section 6: Không hợp lệ ===
+
+- Chi phí cá nhân
+- Không có hóa đơn
+- Nộp quá hạn
+
+=== Section 7: Liên hệ ===
+Email: finance@company.internal
+Hotline: ext. 3000

@@ -1,0 +1,37 @@
+QUY TRÌNH XỬ LÝ SỰ CỐ BẢO MẬT
+Source: security/incident-response-sop.md
+Department: IT Security
+Effective Date: 2026-02-01
+Access: internal
+
+=== Section 1: Mục đích ===
+Đảm bảo sự cố bảo mật được phát hiện và xử lý nhanh chóng.
+
+=== Section 2: Phân loại sự cố ===
+
+- P1: Data breach, system compromise
+- P2: Suspicious activity
+- P3: Minor security issue
+
+=== Section 3: Quy trình ===
+
+Bước 1: Phát hiện sự cố
+Bước 2: Xác nhận severity
+Bước 3: Containment
+Bước 4: Điều tra
+Bước 5: Khắc phục
+
+=== Section 4: SLA ===
+
+- P1: xử lý trong 4 giờ
+- P2: 1 ngày
+- P3: 3 ngày
+
+=== Section 5: Báo cáo ===
+
+- Incident report trong 24 giờ
+- Gửi cho CISO
+
+=== Section 6: Liên hệ ===
+Hotline: ext. 9111
+Email: security@company.internal

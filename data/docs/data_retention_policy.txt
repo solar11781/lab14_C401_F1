@@ -1,0 +1,38 @@
+CHÍNH SÁCH LƯU TRỮ DỮ LIỆU
+Source: security/data-retention-policy.md
+Department: IT Security
+Effective Date: 2026-01-15
+Access: internal
+
+=== Section 1: Mục đích ===
+Quy định thời gian lưu trữ và xóa dữ liệu nhằm tuân thủ quy định pháp luật và bảo mật.
+
+=== Section 2: Phân loại dữ liệu ===
+
+- Dữ liệu khách hàng
+- Dữ liệu nội bộ
+- Log hệ thống
+
+=== Section 3: Thời gian lưu trữ ===
+
+- Log hệ thống: 90 ngày
+- Dữ liệu khách hàng: 5 năm
+- Backup: 30 ngày
+
+=== Section 4: Xóa dữ liệu ===
+
+- Xóa tự động sau thời hạn
+- Phải log lại việc xóa
+
+=== Section 5: Bảo mật ===
+
+- Dữ liệu phải được mã hóa
+- Chỉ cấp quyền theo role
+
+=== Section 6: Audit ===
+
+- Review mỗi 6 tháng
+- Báo cáo lên CISO
+
+=== Section 7: Liên hệ ===
+Email: security@company.internal

@@ -1,0 +1,42 @@
+CHÍNH SÁCH QUẢN LÝ NHÀ CUNG CẤP
+Source: finance/vendor-policy.md
+Department: Finance
+Effective Date: 2026-02-10
+Access: internal
+
+=== Section 1: Mục đích ===
+Đảm bảo việc lựa chọn và quản lý vendor minh bạch, hiệu quả và tuân thủ quy định.
+
+=== Section 2: Phân loại vendor ===
+
+Tier 1 — Strategic:
+- Hợp đồng dài hạn
+- Giá trị lớn
+
+Tier 2 — Approved:
+- Vendor thường xuyên
+
+Tier 3 — One-time:
+- Mua một lần
+
+=== Section 3: Đánh giá vendor ===
+
+- Tần suất: mỗi 6 tháng
+- Tiêu chí:
+  + Giá
+  + Chất lượng
+  + SLA
+  + Support
+
+=== Section 4: Rủi ro và compliance ===
+
+- Vendor phải ký NDA nếu xử lý dữ liệu
+- Kiểm tra bảo mật với vendor IT
+
+=== Section 5: Chấm dứt hợp tác ===
+
+- Vendor vi phạm SLA > 3 lần
+- Chất lượng không đạt
+
+=== Section 6: Liên hệ ===
+Email: vendor@company.internal

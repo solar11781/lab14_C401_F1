@@ -1,0 +1,56 @@
+QUY TRÌNH ONBOARDING NHÂN VIÊN
+Source: hr/onboarding-sop.md
+Department: HR
+Effective Date: 2026-01-05
+Access: internal
+
+=== Section 1: Mục đích ===
+Đảm bảo nhân viên mới được trang bị đầy đủ tài nguyên, thông tin và hỗ trợ để bắt đầu công việc hiệu quả.
+
+=== Section 2: Chuẩn bị trước ngày vào ===
+
+- HR:
+  + Gửi offer letter và hợp đồng
+  + Tạo hồ sơ nhân viên trên HR system
+
+- IT:
+  + Tạo email, tài khoản hệ thống
+  + Chuẩn bị laptop, VPN, access
+
+- Manager:
+  + Chuẩn bị kế hoạch onboarding 30 ngày
+  + Assign buddy hỗ trợ
+
+=== Section 3: Ngày đầu tiên ===
+
+Bước 1: HR orientation (1-2 giờ)
+Bước 2: Nhận thiết bị và đăng nhập hệ thống
+Bước 3: Giới thiệu team và quy trình làm việc
+
+=== Section 4: Tuần đầu tiên ===
+
+- Training:
+  + Nội quy công ty
+  + Tool nội bộ (Jira, Slack, Email)
+
+- Setup:
+  + Development environment
+  + Access hệ thống cần thiết
+
+- Task:
+  + Nhận task đơn giản để làm quen
+
+=== Section 5: Theo dõi và đánh giá ===
+
+- Checkpoint:
+  + Tuần 1: Review tiến độ
+  + Tuần 2: Feedback từ buddy
+  + Tháng 1: Đánh giá sơ bộ
+
+- Kết thúc probation:
+  + Đánh giá performance
+  + Quyết định ký chính thức
+
+=== Section 6: Liên hệ ===
+Email: hr@company.internal
+Hotline: ext. 2000

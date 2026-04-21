@@ -1,0 +1,43 @@
+QUY TRÌNH OFFBOARDING NHÂN VIÊN
+Source: hr/offboarding-sop.md
+Department: HR
+Effective Date: 2026-01-25
+Access: internal
+
+=== Section 1: Mục đích ===
+Đảm bảo việc nghỉ việc của nhân viên được xử lý đầy đủ, an toàn và không gây rủi ro cho hệ thống.
+
+=== Section 2: Thông báo nghỉ việc ===
+
+- Nhân viên gửi đơn nghỉ việc trước:
+  + 30 ngày (nhân viên chính thức)
+  + 7 ngày (probation)
+
+- HR xác nhận và tạo offboarding checklist
+
+=== Section 3: Thu hồi tài sản ===
+
+- Laptop, thiết bị
+- Thẻ nhân viên
+- Tài liệu nội bộ
+
+Thời hạn: trước ngày làm việc cuối
+
+=== Section 4: Thu hồi quyền truy cập ===
+
+- Disable email và hệ thống trong ngày cuối
+- Thu hồi VPN, admin access ngay lập tức
+
+=== Section 5: Exit interview ===
+
+- HR thực hiện phỏng vấn nghỉ việc
+- Ghi nhận feedback
+
+=== Section 6: Thanh toán cuối ===
+
+- Lương còn lại
+- Phép chưa sử dụng
+- Hoàn ứng chi phí (nếu có)
+
+=== Section 7: Liên hệ ===
+Email: hr@company.internal

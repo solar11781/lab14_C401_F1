@@ -1,0 +1,43 @@
+QUY TRÌNH MUA SẮM NỘI BỘ
+Source: finance/procurement-sop.md
+Department: Finance
+Effective Date: 2026-02-01
+Access: internal
+
+=== Section 1: Phạm vi ===
+Áp dụng cho tất cả yêu cầu mua sắm hàng hóa, dịch vụ phục vụ hoạt động công ty.
+
+=== Section 2: Quy trình mua sắm ===
+
+Bước 1: Tạo Purchase Request (PR) trên hệ thống
+Bước 2: Line Manager phê duyệt
+Bước 3: Finance kiểm tra ngân sách
+Bước 4: Procurement tìm vendor và báo giá
+Bước 5: Phê duyệt cuối và đặt hàng
+
+=== Section 3: SLA xử lý ===
+
+- PR < 10 triệu:
+  + Xử lý: 2 ngày làm việc
+
+- PR 10 - 100 triệu:
+  + Xử lý: 5 ngày làm việc
+
+- PR > 100 triệu:
+  + Xử lý: 7 ngày làm việc
+  + Yêu cầu 3 báo giá
+
+=== Section 4: Quy định vendor ===
+
+- Vendor phải nằm trong danh sách approved
+- Hợp đồng bắt buộc:
+  + Đơn > 50 triệu
+  + Dịch vụ dài hạn
+
+=== Section 5: Kiểm soát và audit ===
+
+- Finance audit định kỳ mỗi quý
+- Mọi vi phạm phải báo cáo trong 24 giờ
+
+=== Section 6: Liên hệ ===
+Email: procurement@company.internal

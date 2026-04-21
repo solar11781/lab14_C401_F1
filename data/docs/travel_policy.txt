@@ -1,0 +1,38 @@
+CHÍNH SÁCH CÔNG TÁC
+Source: hr/travel-policy.md
+Department: HR
+Effective Date: 2026-01-30
+Access: internal
+
+=== Section 1: Phạm vi ===
+Áp dụng cho tất cả chuyến công tác trong và ngoài nước.
+
+=== Section 2: Phê duyệt ===
+
+- Công tác phải được Manager approve trước
+- Chuyến > 3 ngày cần Director approve
+
+=== Section 3: Chi phí máy bay ===
+
+- Vé máy bay: economy class
+- Khách sạn: tối đa 3 sao hoặc theo budget
+
+=== Section 4: Chi phí khách sạn ===
+
+- Trong nước: 500,000 VND/ngày
+- Quốc tế: theo từng quốc gia
+
+=== Section 5: Quy trình ===
+
+Bước 1: Tạo travel request
+Bước 2: Approval
+Bước 3: Đặt vé và khách sạn
+Bước 4: Hoàn ứng sau chuyến đi
+
+=== Section 6: Không hợp lệ ===
+
+- Chi phí cá nhân
+- Upgrade vé không được duyệt
+
+=== Section 7: Liên hệ ===
+Email: hr@company.internal
