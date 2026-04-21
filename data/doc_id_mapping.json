@@ -1,0 +1,5868 @@
+{
+  "chunk_0001": {
+    "content": "QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\nSource: it/access-control-sop.md\nDepartment: IT Security\nEffective Date: 2026-01-01\nAccess: internal\n\nGhi chú: Tài liệu này trước đây có tên \"Approval Matrix for System Access\".\n\n=== Section 1: Phạm vi và mục đích ===",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 0
+  },
+  "chunk_0002": {
+    "content": "Access\".\n\n=== Section 1: Phạm vi và mục đích ===\nTài liệu này quy định quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty.\nÁp dụng cho tất cả nhân viên, contractor, và third-party vendor.\n\n=== Section 2: Phân cấp quyền truy cập ===\n\nLevel 1 — Read Only:",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 1
+  },
+  "chunk_0003": {
+    "content": "Phân cấp quyền truy cập ===\n\nLevel 1 — Read Only:\nÁp dụng cho: Tất cả nhân viên mới trong 30 ngày đầu.\nPhê duyệt: Line Manager.\nThời gian xử lý: 1 ngày làm việc.\n\nLevel 2 — Standard Access:\nÁp dụng cho: Nhân viên chính thức đã qua thử việc.\nPhê duyệt: Line Manager + IT Admin.",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 2
+  },
+  "chunk_0004": {
+    "content": "qua thử việc.\nPhê duyệt: Line Manager + IT Admin.\nThời gian xử lý: 2 ngày làm việc.\n\nLevel 3 — Elevated Access:\nÁp dụng cho: Team Lead, Senior Engineer, Manager.\nPhê duyệt: Line Manager + IT Admin + IT Security.\nThời gian xử lý: 3 ngày làm việc.\n\nLevel 4 — Admin Access:",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 3
+  },
+  "chunk_0005": {
+    "content": "xử lý: 3 ngày làm việc.\n\nLevel 4 — Admin Access:\nÁp dụng cho: DevOps, SRE, IT Admin.\nPhê duyệt: IT Manager + CISO.\nThời gian xử lý: 5 ngày làm việc.\nYêu cầu thêm: Training bắt buộc về security policy.\n\n=== Section 3: Quy trình yêu cầu cấp quyền ===",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 4
+  },
+  "chunk_0006": {
+    "content": "=== Section 3: Quy trình yêu cầu cấp quyền ===\n\nBước 1: Nhân viên tạo Access Request ticket trên Jira (project IT-ACCESS).\nBước 2: Line Manager phê duyệt yêu cầu trong 1 ngày làm việc.\nBước 3: IT Admin kiểm tra compliance và cấp quyền.\nBước 4: IT Security review với Level 3 và Level 4.",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 5
+  },
+  "chunk_0007": {
+    "content": "ước 4: IT Security review với Level 3 và Level 4.\nBước 5: Nhân viên nhận thông báo qua email khi quyền được cấp.\n\n=== Section 4: Escalation khi cần thay đổi quyền hệ thống ===\nEscalation chỉ áp dụng khi cần thay đổi quyền hệ thống ngoài quy trình thông thường.",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 6
+  },
+  "chunk_0008": {
+    "content": "đổi quyền hệ thống ngoài quy trình thông thường.\nVí dụ: Khẩn cấp trong sự cố P1, cần cấp quyền tạm thời để fix incident.\n\nQuy trình escalation khẩn cấp:\n1. On-call IT Admin có thể cấp quyền tạm thời (max 24 giờ) sau khi được Tech Lead phê duyệt bằng lời.",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 7
+  },
+  "chunk_0009": {
+    "content": "4 giờ) sau khi được Tech Lead phê duyệt bằng lời.\n2. Sau 24 giờ, phải có ticket chính thức hoặc quyền bị thu hồi tự động.\n3. Mọi quyền tạm thời phải được ghi log vào hệ thống Security Audit.\n\n=== Section 5: Thu hồi quyền truy cập ===\nQuyền phải được thu hồi trong các trường hợp:",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 8
+  },
+  "chunk_0010": {
+    "content": "===\nQuyền phải được thu hồi trong các trường hợp:\n- Nhân viên nghỉ việc: Thu hồi ngay trong ngày cuối.\n- Hết hạn contract: Thu hồi đúng ngày hết hạn.\n- Chuyển bộ phận: Điều chỉnh trong 3 ngày làm việc.\n\n=== Section 6: Audit và review định kỳ ===\nIT Security thực hiện access review mỗi 6 tháng.",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 9
+  },
+  "chunk_0011": {
+    "content": "IT Security thực hiện access review mỗi 6 tháng.\nMọi bất thường phải được báo cáo lên CISO trong vòng 24 giờ.\n\n=== Section 7: Công cụ liên quan ===\nTicket system: Jira (project IT-ACCESS)\nIAM system: Okta\nAudit log: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 10
+  },
+  "chunk_0012": {
+    "content": "dit log: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 11
+  },
+  "chunk_0013": {
+    "content": "it log: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 12
+  },
+  "chunk_0014": {
+    "content": "t log: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 13
+  },
+  "chunk_0015": {
+    "content": "log: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 14
+  },
+  "chunk_0016": {
+    "content": "log: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 15
+  },
+  "chunk_0017": {
+    "content": "og: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 16
+  },
+  "chunk_0018": {
+    "content": "g: Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 17
+  },
+  "chunk_0019": {
+    "content": ": Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 18
+  },
+  "chunk_0020": {
+    "content": "Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 19
+  },
+  "chunk_0021": {
+    "content": "Splunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 20
+  },
+  "chunk_0022": {
+    "content": "plunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 21
+  },
+  "chunk_0023": {
+    "content": "lunk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 22
+  },
+  "chunk_0024": {
+    "content": "unk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 23
+  },
+  "chunk_0025": {
+    "content": "nk\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 24
+  },
+  "chunk_0026": {
+    "content": "k\nEmail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 25
+  },
+  "chunk_0027": {
+    "content": "Email: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 26
+  },
+  "chunk_0028": {
+    "content": "Email: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 27
+  },
+  "chunk_0029": {
+    "content": "mail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 28
+  },
+  "chunk_0030": {
+    "content": "ail: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 29
+  },
+  "chunk_0031": {
+    "content": "il: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 30
+  },
+  "chunk_0032": {
+    "content": "l: it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 31
+  },
+  "chunk_0033": {
+    "content": ": it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 32
+  },
+  "chunk_0034": {
+    "content": "it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 33
+  },
+  "chunk_0035": {
+    "content": "it-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 34
+  },
+  "chunk_0036": {
+    "content": "t-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 35
+  },
+  "chunk_0037": {
+    "content": "-access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 36
+  },
+  "chunk_0038": {
+    "content": "access@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 37
+  },
+  "chunk_0039": {
+    "content": "ccess@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 38
+  },
+  "chunk_0040": {
+    "content": "cess@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 39
+  },
+  "chunk_0041": {
+    "content": "ess@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 40
+  },
+  "chunk_0042": {
+    "content": "ss@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 41
+  },
+  "chunk_0043": {
+    "content": "s@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 42
+  },
+  "chunk_0044": {
+    "content": "@company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 43
+  },
+  "chunk_0045": {
+    "content": "company.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 44
+  },
+  "chunk_0046": {
+    "content": "ompany.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 45
+  },
+  "chunk_0047": {
+    "content": "mpany.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 46
+  },
+  "chunk_0048": {
+    "content": "pany.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 47
+  },
+  "chunk_0049": {
+    "content": "any.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 48
+  },
+  "chunk_0050": {
+    "content": "ny.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 49
+  },
+  "chunk_0051": {
+    "content": "y.internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 50
+  },
+  "chunk_0052": {
+    "content": ".internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 51
+  },
+  "chunk_0053": {
+    "content": "internal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 52
+  },
+  "chunk_0054": {
+    "content": "nternal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 53
+  },
+  "chunk_0055": {
+    "content": "ternal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 54
+  },
+  "chunk_0056": {
+    "content": "ernal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 55
+  },
+  "chunk_0057": {
+    "content": "rnal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 56
+  },
+  "chunk_0058": {
+    "content": "nal",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 57
+  },
+  "chunk_0059": {
+    "content": "al",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 58
+  },
+  "chunk_0060": {
+    "content": "l",
+    "source": "it/access-control-sop.md",
+    "filename": "access_control_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 59
+  },
+  "chunk_0061": {
+    "content": "CHÍNH SÁCH QUẢN LÝ THAY ĐỔI HỆ THỐNG\nSource: it/change-management-policy.md\nDepartment: IT\nEffective Date: 2026-02-05\nAccess: internal\n\n=== Section 1: Mục đích ===\nĐảm bảo mọi thay đổi hệ thống được kiểm soát, giảm thiểu rủi ro downtime.\n\n=== Section 2: Phân loại change ===\n\n- Standard Change:",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 0
+  },
+  "chunk_0062": {
+    "content": "ction 2: Phân loại change ===\n\n- Standard Change:\n  + Lặp lại, rủi ro thấp\n\n- Normal Change:\n  + Cần approval\n\n- Emergency Change:\n  + Áp dụng cho sự cố P1\n\n=== Section 3: Quy trình ===\n\nBước 1: Tạo Change Request (CR)\nBước 2: Đánh giá impact\nBước 3: Phê duyệt\nBước 4: Triển khai",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 1
+  },
+  "chunk_0063": {
+    "content": "h giá impact\nBước 3: Phê duyệt\nBước 4: Triển khai\nBước 5: Review sau change\n\n=== Section 4: SLA ===\n\n- Standard: 1 ngày\n- Normal: 3 ngày\n- Emergency: ngay lập tức\n\n=== Section 5: Rollback ===\n\n- Mọi change phải có plan rollback\n- Thực hiện rollback nếu lỗi xảy ra\n\n=== Section 6: Liên hệ ===",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 2
+  },
+  "chunk_0064": {
+    "content": "llback nếu lỗi xảy ra\n\n=== Section 6: Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 3
+  },
+  "chunk_0065": {
+    "content": "n 6: Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 4
+  },
+  "chunk_0066": {
+    "content": "6: Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 5
+  },
+  "chunk_0067": {
+    "content": "6: Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 6
+  },
+  "chunk_0068": {
+    "content": ": Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 7
+  },
+  "chunk_0069": {
+    "content": "Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 8
+  },
+  "chunk_0070": {
+    "content": "Liên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 9
+  },
+  "chunk_0071": {
+    "content": "iên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 10
+  },
+  "chunk_0072": {
+    "content": "ên hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 11
+  },
+  "chunk_0073": {
+    "content": "n hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 12
+  },
+  "chunk_0074": {
+    "content": "hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 13
+  },
+  "chunk_0075": {
+    "content": "hệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 14
+  },
+  "chunk_0076": {
+    "content": "ệ ===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 15
+  },
+  "chunk_0077": {
+    "content": "===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 16
+  },
+  "chunk_0078": {
+    "content": "===\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 17
+  },
+  "chunk_0079": {
+    "content": "==\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 18
+  },
+  "chunk_0080": {
+    "content": "=\nEmail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 19
+  },
+  "chunk_0081": {
+    "content": "Email: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 20
+  },
+  "chunk_0082": {
+    "content": "Email: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 21
+  },
+  "chunk_0083": {
+    "content": "mail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 22
+  },
+  "chunk_0084": {
+    "content": "ail: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 23
+  },
+  "chunk_0085": {
+    "content": "il: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 24
+  },
+  "chunk_0086": {
+    "content": "l: it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 25
+  },
+  "chunk_0087": {
+    "content": ": it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 26
+  },
+  "chunk_0088": {
+    "content": "it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 27
+  },
+  "chunk_0089": {
+    "content": "it-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 28
+  },
+  "chunk_0090": {
+    "content": "t-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 29
+  },
+  "chunk_0091": {
+    "content": "-change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 30
+  },
+  "chunk_0092": {
+    "content": "change@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 31
+  },
+  "chunk_0093": {
+    "content": "hange@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 32
+  },
+  "chunk_0094": {
+    "content": "ange@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 33
+  },
+  "chunk_0095": {
+    "content": "nge@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 34
+  },
+  "chunk_0096": {
+    "content": "ge@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 35
+  },
+  "chunk_0097": {
+    "content": "e@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 36
+  },
+  "chunk_0098": {
+    "content": "@company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 37
+  },
+  "chunk_0099": {
+    "content": "company.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 38
+  },
+  "chunk_0100": {
+    "content": "ompany.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 39
+  },
+  "chunk_0101": {
+    "content": "mpany.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 40
+  },
+  "chunk_0102": {
+    "content": "pany.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 41
+  },
+  "chunk_0103": {
+    "content": "any.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 42
+  },
+  "chunk_0104": {
+    "content": "ny.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 43
+  },
+  "chunk_0105": {
+    "content": "y.internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 44
+  },
+  "chunk_0106": {
+    "content": ".internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 45
+  },
+  "chunk_0107": {
+    "content": "internal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 46
+  },
+  "chunk_0108": {
+    "content": "nternal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 47
+  },
+  "chunk_0109": {
+    "content": "ternal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 48
+  },
+  "chunk_0110": {
+    "content": "ernal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 49
+  },
+  "chunk_0111": {
+    "content": "rnal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 50
+  },
+  "chunk_0112": {
+    "content": "nal",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 51
+  },
+  "chunk_0113": {
+    "content": "al",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 52
+  },
+  "chunk_0114": {
+    "content": "l",
+    "source": "it/change-management-policy.md",
+    "filename": "change_management_policy.txt",
+    "department": "IT",
+    "chunk_index": 53
+  },
+  "chunk_0115": {
+    "content": "CHÍNH SÁCH LƯU TRỮ DỮ LIỆU\nSource: security/data-retention-policy.md\nDepartment: IT Security\nEffective Date: 2026-01-15\nAccess: internal\n\n=== Section 1: Mục đích ===\nQuy định thời gian lưu trữ và xóa dữ liệu nhằm tuân thủ quy định pháp luật và bảo mật.\n\n=== Section 2: Phân loại dữ liệu ===",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 0
+  },
+  "chunk_0116": {
+    "content": "à bảo mật.\n\n=== Section 2: Phân loại dữ liệu ===\n\n- Dữ liệu khách hàng\n- Dữ liệu nội bộ\n- Log hệ thống\n\n=== Section 3: Thời gian lưu trữ ===\n\n- Log hệ thống: 90 ngày\n- Dữ liệu khách hàng: 5 năm\n- Backup: 30 ngày\n\n=== Section 4: Xóa dữ liệu ===\n\n- Xóa tự động sau thời hạn\n- Phải log lại việc xóa",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 1
+  },
+  "chunk_0117": {
+    "content": "Xóa tự động sau thời hạn\n- Phải log lại việc xóa\n\n=== Section 5: Bảo mật ===\n\n- Dữ liệu phải được mã hóa\n- Chỉ cấp quyền theo role\n\n=== Section 6: Audit ===\n\n- Review mỗi 6 tháng\n- Báo cáo lên CISO\n\n=== Section 7: Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 2
+  },
+  "chunk_0118": {
+    "content": "on 7: Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 3
+  },
+  "chunk_0119": {
+    "content": "n 7: Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 4
+  },
+  "chunk_0120": {
+    "content": "7: Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 5
+  },
+  "chunk_0121": {
+    "content": "7: Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 6
+  },
+  "chunk_0122": {
+    "content": ": Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 7
+  },
+  "chunk_0123": {
+    "content": "Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 8
+  },
+  "chunk_0124": {
+    "content": "Liên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 9
+  },
+  "chunk_0125": {
+    "content": "iên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 10
+  },
+  "chunk_0126": {
+    "content": "ên hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 11
+  },
+  "chunk_0127": {
+    "content": "n hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 12
+  },
+  "chunk_0128": {
+    "content": "hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 13
+  },
+  "chunk_0129": {
+    "content": "hệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 14
+  },
+  "chunk_0130": {
+    "content": "ệ ===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 15
+  },
+  "chunk_0131": {
+    "content": "===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 16
+  },
+  "chunk_0132": {
+    "content": "===\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 17
+  },
+  "chunk_0133": {
+    "content": "==\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 18
+  },
+  "chunk_0134": {
+    "content": "=\nEmail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 19
+  },
+  "chunk_0135": {
+    "content": "Email: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 20
+  },
+  "chunk_0136": {
+    "content": "Email: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 21
+  },
+  "chunk_0137": {
+    "content": "mail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 22
+  },
+  "chunk_0138": {
+    "content": "ail: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 23
+  },
+  "chunk_0139": {
+    "content": "il: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 24
+  },
+  "chunk_0140": {
+    "content": "l: security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 25
+  },
+  "chunk_0141": {
+    "content": ": security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 26
+  },
+  "chunk_0142": {
+    "content": "security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 27
+  },
+  "chunk_0143": {
+    "content": "security@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 28
+  },
+  "chunk_0144": {
+    "content": "ecurity@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 29
+  },
+  "chunk_0145": {
+    "content": "curity@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 30
+  },
+  "chunk_0146": {
+    "content": "urity@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 31
+  },
+  "chunk_0147": {
+    "content": "rity@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 32
+  },
+  "chunk_0148": {
+    "content": "ity@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 33
+  },
+  "chunk_0149": {
+    "content": "ty@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 34
+  },
+  "chunk_0150": {
+    "content": "y@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 35
+  },
+  "chunk_0151": {
+    "content": "@company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 36
+  },
+  "chunk_0152": {
+    "content": "company.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 37
+  },
+  "chunk_0153": {
+    "content": "ompany.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 38
+  },
+  "chunk_0154": {
+    "content": "mpany.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 39
+  },
+  "chunk_0155": {
+    "content": "pany.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 40
+  },
+  "chunk_0156": {
+    "content": "any.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 41
+  },
+  "chunk_0157": {
+    "content": "ny.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 42
+  },
+  "chunk_0158": {
+    "content": "y.internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 43
+  },
+  "chunk_0159": {
+    "content": ".internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 44
+  },
+  "chunk_0160": {
+    "content": "internal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 45
+  },
+  "chunk_0161": {
+    "content": "nternal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 46
+  },
+  "chunk_0162": {
+    "content": "ternal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 47
+  },
+  "chunk_0163": {
+    "content": "ernal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 48
+  },
+  "chunk_0164": {
+    "content": "rnal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 49
+  },
+  "chunk_0165": {
+    "content": "nal",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 50
+  },
+  "chunk_0166": {
+    "content": "al",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 51
+  },
+  "chunk_0167": {
+    "content": "l",
+    "source": "security/data-retention-policy.md",
+    "filename": "data_retention_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 52
+  },
+  "chunk_0168": {
+    "content": "QUY TRÌNH ONBOARDING NHÂN VIÊN\nSource: hr/onboarding-sop.md\nDepartment: HR\nEffective Date: 2026-01-05\nAccess: internal\n\n=== Section 1: Mục đích ===\nĐảm bảo nhân viên mới được trang bị đầy đủ tài nguyên, thông tin và hỗ trợ để bắt đầu công việc hiệu quả.\n\n=== Section 2: Chuẩn bị trước ngày vào ===",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 0
+  },
+  "chunk_0169": {
+    "content": "quả.\n\n=== Section 2: Chuẩn bị trước ngày vào ===\n\n- HR:\n  + Gửi offer letter và hợp đồng\n  + Tạo hồ sơ nhân viên trên HR system\n\n- IT:\n  + Tạo email, tài khoản hệ thống\n  + Chuẩn bị laptop, VPN, access\n\n- Manager:\n  + Chuẩn bị kế hoạch onboarding 30 ngày\n  + Assign buddy hỗ trợ",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 1
+  },
+  "chunk_0170": {
+    "content": "hoạch onboarding 30 ngày\n  + Assign buddy hỗ trợ\n\n=== Section 3: Ngày đầu tiên ===\n\nBước 1: HR orientation (1-2 giờ)\nBước 2: Nhận thiết bị và đăng nhập hệ thống\nBước 3: Giới thiệu team và quy trình làm việc\n\n=== Section 4: Tuần đầu tiên ===\n\n- Training:\n  + Nội quy công ty",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 2
+  },
+  "chunk_0171": {
+    "content": "uần đầu tiên ===\n\n- Training:\n  + Nội quy công ty\n  + Tool nội bộ (Jira, Slack, Email)\n\n- Setup:\n  + Development environment\n  + Access hệ thống cần thiết\n\n- Task:\n  + Nhận task đơn giản để làm quen\n\n=== Section 5: Theo dõi và đánh giá ===\n\n- Checkpoint:\n  + Tuần 1: Review tiến độ",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 3
+  },
+  "chunk_0172": {
+    "content": "giá ===\n\n- Checkpoint:\n  + Tuần 1: Review tiến độ\n  + Tuần 2: Feedback từ buddy\n  + Tháng 1: Đánh giá sơ bộ\n\n- Kết thúc probation:\n  + Đánh giá performance\n  + Quyết định ký chính thức\n\n=== Section 6: Liên hệ ===\nEmail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 4
+  },
+  "chunk_0173": {
+    "content": "===\nEmail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 5
+  },
+  "chunk_0174": {
+    "content": "===\nEmail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 6
+  },
+  "chunk_0175": {
+    "content": "==\nEmail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 7
+  },
+  "chunk_0176": {
+    "content": "=\nEmail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 8
+  },
+  "chunk_0177": {
+    "content": "Email: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 9
+  },
+  "chunk_0178": {
+    "content": "Email: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 10
+  },
+  "chunk_0179": {
+    "content": "mail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 11
+  },
+  "chunk_0180": {
+    "content": "ail: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 12
+  },
+  "chunk_0181": {
+    "content": "il: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 13
+  },
+  "chunk_0182": {
+    "content": "l: hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 14
+  },
+  "chunk_0183": {
+    "content": ": hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 15
+  },
+  "chunk_0184": {
+    "content": "hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 16
+  },
+  "chunk_0185": {
+    "content": "hr@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 17
+  },
+  "chunk_0186": {
+    "content": "r@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 18
+  },
+  "chunk_0187": {
+    "content": "@company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 19
+  },
+  "chunk_0188": {
+    "content": "company.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 20
+  },
+  "chunk_0189": {
+    "content": "ompany.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 21
+  },
+  "chunk_0190": {
+    "content": "mpany.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 22
+  },
+  "chunk_0191": {
+    "content": "pany.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 23
+  },
+  "chunk_0192": {
+    "content": "any.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 24
+  },
+  "chunk_0193": {
+    "content": "ny.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 25
+  },
+  "chunk_0194": {
+    "content": "y.internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 26
+  },
+  "chunk_0195": {
+    "content": ".internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 27
+  },
+  "chunk_0196": {
+    "content": "internal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 28
+  },
+  "chunk_0197": {
+    "content": "nternal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 29
+  },
+  "chunk_0198": {
+    "content": "ternal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 30
+  },
+  "chunk_0199": {
+    "content": "ernal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 31
+  },
+  "chunk_0200": {
+    "content": "rnal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 32
+  },
+  "chunk_0201": {
+    "content": "nal\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 33
+  },
+  "chunk_0202": {
+    "content": "al\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 34
+  },
+  "chunk_0203": {
+    "content": "l\nHotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 35
+  },
+  "chunk_0204": {
+    "content": "Hotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 36
+  },
+  "chunk_0205": {
+    "content": "Hotline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 37
+  },
+  "chunk_0206": {
+    "content": "otline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 38
+  },
+  "chunk_0207": {
+    "content": "tline: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 39
+  },
+  "chunk_0208": {
+    "content": "line: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 40
+  },
+  "chunk_0209": {
+    "content": "ine: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 41
+  },
+  "chunk_0210": {
+    "content": "ne: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 42
+  },
+  "chunk_0211": {
+    "content": "e: ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 43
+  },
+  "chunk_0212": {
+    "content": ": ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 44
+  },
+  "chunk_0213": {
+    "content": "ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 45
+  },
+  "chunk_0214": {
+    "content": "ext. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 46
+  },
+  "chunk_0215": {
+    "content": "xt. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 47
+  },
+  "chunk_0216": {
+    "content": "t. 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 48
+  },
+  "chunk_0217": {
+    "content": ". 2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 49
+  },
+  "chunk_0218": {
+    "content": "2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 50
+  },
+  "chunk_0219": {
+    "content": "2000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 51
+  },
+  "chunk_0220": {
+    "content": "000",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 52
+  },
+  "chunk_0221": {
+    "content": "00",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 53
+  },
+  "chunk_0222": {
+    "content": "0",
+    "source": "hr/onboarding-sop.md",
+    "filename": "employee_onboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 54
+  },
+  "chunk_0223": {
+    "content": "CHÍNH SÁCH HOÀN ỨNG CHI PHÍ\nSource: finance/expense-policy.md\nDepartment: Finance\nEffective Date: 2026-01-20\nAccess: internal\n\n=== Section 1: Phạm vi ===\nÁp dụng cho tất cả chi phí phát sinh phục vụ công việc.\n\n=== Section 2: Điều kiện hoàn ứng ===\n\n- Có hóa đơn hợp lệ (VAT nếu có)",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 0
+  },
+  "chunk_0224": {
+    "content": "ện hoàn ứng ===\n\n- Có hóa đơn hợp lệ (VAT nếu có)\n- Được Manager phê duyệt trước (nếu > 1 triệu)\n- Gửi claim trong vòng 30 ngày\n\n=== Section 3: Quy trình ===\n\nBước 1: Tạo expense claim trên hệ thống\nBước 2: Upload hóa đơn\nBước 3: Manager approve\nBước 4: Finance review và thanh toán",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 1
+  },
+  "chunk_0225": {
+    "content": "ger approve\nBước 4: Finance review và thanh toán\n\n=== Section 4: SLA xử lý ===\n\n- Finance xử lý: 3-5 ngày làm việc\n- Thanh toán: trong kỳ payroll gần nhất\n\n=== Section 5: Loại chi phí hợp lệ ===\n\n- Công tác phí\n- Chi phí ăn ở khi đi công tác\n- Phần mềm phục vụ công việc",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 2
+  },
+  "chunk_0226": {
+    "content": "n ở khi đi công tác\n- Phần mềm phục vụ công việc\n\n=== Section 6: Không hợp lệ ===\n\n- Chi phí cá nhân\n- Không có hóa đơn\n- Nộp quá hạn\n\n=== Section 7: Liên hệ ===\nEmail: finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 3
+  },
+  "chunk_0227": {
+    "content": "Email: finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 4
+  },
+  "chunk_0228": {
+    "content": "mail: finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 5
+  },
+  "chunk_0229": {
+    "content": "ail: finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 6
+  },
+  "chunk_0230": {
+    "content": "il: finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 7
+  },
+  "chunk_0231": {
+    "content": "l: finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 8
+  },
+  "chunk_0232": {
+    "content": ": finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 9
+  },
+  "chunk_0233": {
+    "content": "finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 10
+  },
+  "chunk_0234": {
+    "content": "finance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 11
+  },
+  "chunk_0235": {
+    "content": "inance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 12
+  },
+  "chunk_0236": {
+    "content": "nance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 13
+  },
+  "chunk_0237": {
+    "content": "ance@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 14
+  },
+  "chunk_0238": {
+    "content": "nce@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 15
+  },
+  "chunk_0239": {
+    "content": "ce@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 16
+  },
+  "chunk_0240": {
+    "content": "e@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 17
+  },
+  "chunk_0241": {
+    "content": "@company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 18
+  },
+  "chunk_0242": {
+    "content": "company.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 19
+  },
+  "chunk_0243": {
+    "content": "ompany.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 20
+  },
+  "chunk_0244": {
+    "content": "mpany.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 21
+  },
+  "chunk_0245": {
+    "content": "pany.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 22
+  },
+  "chunk_0246": {
+    "content": "any.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 23
+  },
+  "chunk_0247": {
+    "content": "ny.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 24
+  },
+  "chunk_0248": {
+    "content": "y.internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 25
+  },
+  "chunk_0249": {
+    "content": ".internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 26
+  },
+  "chunk_0250": {
+    "content": "internal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 27
+  },
+  "chunk_0251": {
+    "content": "nternal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 28
+  },
+  "chunk_0252": {
+    "content": "ternal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 29
+  },
+  "chunk_0253": {
+    "content": "ernal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 30
+  },
+  "chunk_0254": {
+    "content": "rnal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 31
+  },
+  "chunk_0255": {
+    "content": "nal\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 32
+  },
+  "chunk_0256": {
+    "content": "al\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 33
+  },
+  "chunk_0257": {
+    "content": "l\nHotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 34
+  },
+  "chunk_0258": {
+    "content": "Hotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 35
+  },
+  "chunk_0259": {
+    "content": "Hotline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 36
+  },
+  "chunk_0260": {
+    "content": "otline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 37
+  },
+  "chunk_0261": {
+    "content": "tline: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 38
+  },
+  "chunk_0262": {
+    "content": "line: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 39
+  },
+  "chunk_0263": {
+    "content": "ine: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 40
+  },
+  "chunk_0264": {
+    "content": "ne: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 41
+  },
+  "chunk_0265": {
+    "content": "e: ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 42
+  },
+  "chunk_0266": {
+    "content": ": ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 43
+  },
+  "chunk_0267": {
+    "content": "ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 44
+  },
+  "chunk_0268": {
+    "content": "ext. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 45
+  },
+  "chunk_0269": {
+    "content": "xt. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 46
+  },
+  "chunk_0270": {
+    "content": "t. 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 47
+  },
+  "chunk_0271": {
+    "content": ". 3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 48
+  },
+  "chunk_0272": {
+    "content": "3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 49
+  },
+  "chunk_0273": {
+    "content": "3000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 50
+  },
+  "chunk_0274": {
+    "content": "000",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 51
+  },
+  "chunk_0275": {
+    "content": "00",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 52
+  },
+  "chunk_0276": {
+    "content": "0",
+    "source": "finance/expense-policy.md",
+    "filename": "expense_reimbursement_policy.txt",
+    "department": "Finance",
+    "chunk_index": 53
+  },
+  "chunk_0277": {
+    "content": "CHÍNH SÁCH NGHỈ PHÉP VÀ PHÚC LỢI NHÂN SỰ\nSource: hr/leave-policy-2026.pdf\nDepartment: HR\nEffective Date: 2026-01-01\nAccess: internal\n\n=== Phần 1: Các loại nghỉ phép ===\n\n1.1 Nghỉ phép năm (Annual Leave):\n- Số ngày: 12 ngày/năm cho nhân viên dưới 3 năm kinh nghiệm.",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 0
+  },
+  "chunk_0278": {
+    "content": "12 ngày/năm cho nhân viên dưới 3 năm kinh nghiệm.\n- Số ngày: 15 ngày/năm cho nhân viên từ 3-5 năm kinh nghiệm.\n- Số ngày: 18 ngày/năm cho nhân viên trên 5 năm kinh nghiệm.\n- Chuyển năm sau: Tối đa 5 ngày phép năm chưa dùng được chuyển sang năm tiếp theo.\n\n1.2 Nghỉ ốm (Sick Leave):",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 1
+  },
+  "chunk_0279": {
+    "content": "ển sang năm tiếp theo.\n\n1.2 Nghỉ ốm (Sick Leave):\n- Số ngày: 10 ngày/năm có trả lương.\n- Yêu cầu: Thông báo cho Line Manager trước 9:00 sáng ngày nghỉ.\n- Nếu nghỉ trên 3 ngày liên tiếp: Cần giấy tờ y tế từ bệnh viện.\n\n1.3 Nghỉ thai sản:\n- Nghỉ sinh con: 6 tháng theo quy định Luật Lao động.",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 2
+  },
+  "chunk_0280": {
+    "content": "hỉ sinh con: 6 tháng theo quy định Luật Lao động.\n- Nghỉ nuôi con nhỏ: 1 tiếng/ngày trong 12 tháng đầu sau sinh.\n\n1.4 Nghỉ lễ tết:\nTheo lịch nghỉ lễ quốc gia do HR công bố hàng năm vào tháng 12.\n\n=== Phần 2: Quy trình xin nghỉ phép ===",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 3
+  },
+  "chunk_0281": {
+    "content": "áng 12.\n\n=== Phần 2: Quy trình xin nghỉ phép ===\n\nBước 1: Nhân viên gửi yêu cầu nghỉ phép qua hệ thống HR Portal (https://hr.company.internal) ít nhất 3 ngày làm việc trước ngày nghỉ.\nBước 2: Line Manager phê duyệt hoặc từ chối trong vòng 1 ngày làm việc.",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 4
+  },
+  "chunk_0282": {
+    "content": "hê duyệt hoặc từ chối trong vòng 1 ngày làm việc.\nBước 3: Nhân viên nhận thông báo qua email sau khi được phê duyệt.\n\nTrường hợp khẩn cấp: Có thể gửi yêu cầu muộn hơn nhưng phải được Line Manager đồng ý qua tin nhắn trực tiếp.\n\n=== Phần 3: Chính sách làm thêm giờ ===\n\n3.1 Điều kiện làm thêm:",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 5
+  },
+  "chunk_0283": {
+    "content": "nh sách làm thêm giờ ===\n\n3.1 Điều kiện làm thêm:\nLàm thêm giờ phải được Line Manager phê duyệt trước bằng văn bản.\n\n3.2 Hệ số lương làm thêm:\n- Ngày thường: 150% lương giờ tiêu chuẩn.\n- Ngày cuối tuần: 200% lương giờ tiêu chuẩn.\n- Ngày lễ: 300% lương giờ tiêu chuẩn.",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 6
+  },
+  "chunk_0284": {
+    "content": "iêu chuẩn.\n- Ngày lễ: 300% lương giờ tiêu chuẩn.\n\n=== Phần 4: Remote work policy ===\n\n4.1 Điều kiện remote:\n- Nhân viên sau probation period có thể làm remote tối đa 2 ngày/tuần.\n- Team Lead phải phê duyệt lịch remote qua HR Portal.\n- Ngày onsite bắt buộc: Thứ 3 và Thứ 5 theo lịch team.",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 7
+  },
+  "chunk_0285": {
+    "content": "onsite bắt buộc: Thứ 3 và Thứ 5 theo lịch team.\n\n4.2 Yêu cầu kỹ thuật khi remote:\n- Kết nối VPN bắt buộc khi làm việc với hệ thống nội bộ.\n- Camera bật trong các cuộc họp team.\n\n=== Phần 5: Liên hệ HR ===\nEmail: hr@company.internal\nHotline: ext. 2000\nHR Portal: https://hr.company.internal",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 8
+  },
+  "chunk_0286": {
+    "content": "ext. 2000\nHR Portal: https://hr.company.internal\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 9
+  },
+  "chunk_0287": {
+    "content": "nternal\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 10
+  },
+  "chunk_0288": {
+    "content": "ternal\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 11
+  },
+  "chunk_0289": {
+    "content": "ernal\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 12
+  },
+  "chunk_0290": {
+    "content": "rnal\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 13
+  },
+  "chunk_0291": {
+    "content": "nal\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 14
+  },
+  "chunk_0292": {
+    "content": "al\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 15
+  },
+  "chunk_0293": {
+    "content": "l\nGiờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 16
+  },
+  "chunk_0294": {
+    "content": "Giờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 17
+  },
+  "chunk_0295": {
+    "content": "Giờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 18
+  },
+  "chunk_0296": {
+    "content": "iờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 19
+  },
+  "chunk_0297": {
+    "content": "ờ làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 20
+  },
+  "chunk_0298": {
+    "content": "làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 21
+  },
+  "chunk_0299": {
+    "content": "làm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 22
+  },
+  "chunk_0300": {
+    "content": "àm việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 23
+  },
+  "chunk_0301": {
+    "content": "m việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 24
+  },
+  "chunk_0302": {
+    "content": "việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 25
+  },
+  "chunk_0303": {
+    "content": "việc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 26
+  },
+  "chunk_0304": {
+    "content": "iệc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 27
+  },
+  "chunk_0305": {
+    "content": "ệc: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 28
+  },
+  "chunk_0306": {
+    "content": "c: Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 29
+  },
+  "chunk_0307": {
+    "content": ": Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 30
+  },
+  "chunk_0308": {
+    "content": "Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 31
+  },
+  "chunk_0309": {
+    "content": "Thứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 32
+  },
+  "chunk_0310": {
+    "content": "hứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 33
+  },
+  "chunk_0311": {
+    "content": "ứ 2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 34
+  },
+  "chunk_0312": {
+    "content": "2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 35
+  },
+  "chunk_0313": {
+    "content": "2 - Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 36
+  },
+  "chunk_0314": {
+    "content": "- Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 37
+  },
+  "chunk_0315": {
+    "content": "- Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 38
+  },
+  "chunk_0316": {
+    "content": "Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 39
+  },
+  "chunk_0317": {
+    "content": "Thứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 40
+  },
+  "chunk_0318": {
+    "content": "hứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 41
+  },
+  "chunk_0319": {
+    "content": "ứ 6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 42
+  },
+  "chunk_0320": {
+    "content": "6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 43
+  },
+  "chunk_0321": {
+    "content": "6, 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 44
+  },
+  "chunk_0322": {
+    "content": ", 8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 45
+  },
+  "chunk_0323": {
+    "content": "8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 46
+  },
+  "chunk_0324": {
+    "content": "8:30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 47
+  },
+  "chunk_0325": {
+    "content": ":30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 48
+  },
+  "chunk_0326": {
+    "content": "30 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 49
+  },
+  "chunk_0327": {
+    "content": "0 - 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 50
+  },
+  "chunk_0328": {
+    "content": "- 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 51
+  },
+  "chunk_0329": {
+    "content": "- 17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 52
+  },
+  "chunk_0330": {
+    "content": "17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 53
+  },
+  "chunk_0331": {
+    "content": "17:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 54
+  },
+  "chunk_0332": {
+    "content": "7:30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 55
+  },
+  "chunk_0333": {
+    "content": ":30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 56
+  },
+  "chunk_0334": {
+    "content": "30",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 57
+  },
+  "chunk_0335": {
+    "content": "0",
+    "source": "hr/leave-policy-2026.pdf",
+    "filename": "hr_leave_policy.txt",
+    "department": "HR",
+    "chunk_index": 58
+  },
+  "chunk_0336": {
+    "content": "QUY TRÌNH XỬ LÝ SỰ CỐ BẢO MẬT\nSource: security/incident-response-sop.md\nDepartment: IT Security\nEffective Date: 2026-02-01\nAccess: internal\n\n=== Section 1: Mục đích ===\nĐảm bảo sự cố bảo mật được phát hiện và xử lý nhanh chóng.\n\n=== Section 2: Phân loại sự cố ===",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 0
+  },
+  "chunk_0337": {
+    "content": "nhanh chóng.\n\n=== Section 2: Phân loại sự cố ===\n\n- P1: Data breach, system compromise\n- P2: Suspicious activity\n- P3: Minor security issue\n\n=== Section 3: Quy trình ===\n\nBước 1: Phát hiện sự cố\nBước 2: Xác nhận severity\nBước 3: Containment\nBước 4: Điều tra\nBước 5: Khắc phục\n\n=== Section 4: SLA ===",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 1
+  },
+  "chunk_0338": {
+    "content": "iều tra\nBước 5: Khắc phục\n\n=== Section 4: SLA ===\n\n- P1: xử lý trong 4 giờ\n- P2: 1 ngày\n- P3: 3 ngày\n\n=== Section 5: Báo cáo ===\n\n- Incident report trong 24 giờ\n- Gửi cho CISO\n\n=== Section 6: Liên hệ ===\nHotline: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 2
+  },
+  "chunk_0339": {
+    "content": "otline: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 3
+  },
+  "chunk_0340": {
+    "content": "tline: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 4
+  },
+  "chunk_0341": {
+    "content": "line: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 5
+  },
+  "chunk_0342": {
+    "content": "ine: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 6
+  },
+  "chunk_0343": {
+    "content": "ne: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 7
+  },
+  "chunk_0344": {
+    "content": "e: ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 8
+  },
+  "chunk_0345": {
+    "content": ": ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 9
+  },
+  "chunk_0346": {
+    "content": "ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 10
+  },
+  "chunk_0347": {
+    "content": "ext. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 11
+  },
+  "chunk_0348": {
+    "content": "xt. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 12
+  },
+  "chunk_0349": {
+    "content": "t. 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 13
+  },
+  "chunk_0350": {
+    "content": ". 9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 14
+  },
+  "chunk_0351": {
+    "content": "9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 15
+  },
+  "chunk_0352": {
+    "content": "9111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 16
+  },
+  "chunk_0353": {
+    "content": "111\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 17
+  },
+  "chunk_0354": {
+    "content": "11\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 18
+  },
+  "chunk_0355": {
+    "content": "1\nEmail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 19
+  },
+  "chunk_0356": {
+    "content": "Email: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 20
+  },
+  "chunk_0357": {
+    "content": "Email: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 21
+  },
+  "chunk_0358": {
+    "content": "mail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 22
+  },
+  "chunk_0359": {
+    "content": "ail: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 23
+  },
+  "chunk_0360": {
+    "content": "il: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 24
+  },
+  "chunk_0361": {
+    "content": "l: security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 25
+  },
+  "chunk_0362": {
+    "content": ": security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 26
+  },
+  "chunk_0363": {
+    "content": "security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 27
+  },
+  "chunk_0364": {
+    "content": "security@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 28
+  },
+  "chunk_0365": {
+    "content": "ecurity@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 29
+  },
+  "chunk_0366": {
+    "content": "curity@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 30
+  },
+  "chunk_0367": {
+    "content": "urity@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 31
+  },
+  "chunk_0368": {
+    "content": "rity@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 32
+  },
+  "chunk_0369": {
+    "content": "ity@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 33
+  },
+  "chunk_0370": {
+    "content": "ty@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 34
+  },
+  "chunk_0371": {
+    "content": "y@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 35
+  },
+  "chunk_0372": {
+    "content": "@company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 36
+  },
+  "chunk_0373": {
+    "content": "company.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 37
+  },
+  "chunk_0374": {
+    "content": "ompany.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 38
+  },
+  "chunk_0375": {
+    "content": "mpany.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 39
+  },
+  "chunk_0376": {
+    "content": "pany.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 40
+  },
+  "chunk_0377": {
+    "content": "any.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 41
+  },
+  "chunk_0378": {
+    "content": "ny.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 42
+  },
+  "chunk_0379": {
+    "content": "y.internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 43
+  },
+  "chunk_0380": {
+    "content": ".internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 44
+  },
+  "chunk_0381": {
+    "content": "internal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 45
+  },
+  "chunk_0382": {
+    "content": "nternal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 46
+  },
+  "chunk_0383": {
+    "content": "ternal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 47
+  },
+  "chunk_0384": {
+    "content": "ernal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 48
+  },
+  "chunk_0385": {
+    "content": "rnal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 49
+  },
+  "chunk_0386": {
+    "content": "nal",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 50
+  },
+  "chunk_0387": {
+    "content": "al",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 51
+  },
+  "chunk_0388": {
+    "content": "l",
+    "source": "security/incident-response-sop.md",
+    "filename": "incident_response_sop.txt",
+    "department": "IT Security",
+    "chunk_index": 52
+  },
+  "chunk_0389": {
+    "content": "IT HELPDESK FAQ — CÂU HỎI THƯỜNG GẶP\nSource: support/helpdesk-faq.md\nDepartment: IT\nEffective Date: 2026-01-20\nAccess: internal\n\n=== Section 1: Tài khoản và mật khẩu ===\n\nQ: Tôi quên mật khẩu, phải làm gì?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 0
+  },
+  "chunk_0390": {
+    "content": "mật khẩu ===\n\nQ: Tôi quên mật khẩu, phải làm gì?\nA: Truy cập https://sso.company.internal/reset hoặc liên hệ Helpdesk qua ext. 9000. Mật khẩu mới sẽ được gửi qua email công ty trong vòng 5 phút.\n\nQ: Tài khoản bị khóa sau bao nhiêu lần đăng nhập sai?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 1
+  },
+  "chunk_0391": {
+    "content": "ài khoản bị khóa sau bao nhiêu lần đăng nhập sai?\nA: Tài khoản bị khóa sau 5 lần đăng nhập sai liên tiếp. Để mở khóa, liên hệ IT Helpdesk hoặc tự reset qua portal SSO.\n\nQ: Mật khẩu cần thay đổi định kỳ không?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 2
+  },
+  "chunk_0392": {
+    "content": "tal SSO.\n\nQ: Mật khẩu cần thay đổi định kỳ không?\nA: Có. Mật khẩu phải được thay đổi mỗi 90 ngày. Hệ thống sẽ nhắc nhở 7 ngày trước khi hết hạn.\n\n=== Section 2: VPN và kết nối từ xa ===\n\nQ: Phần mềm VPN nào công ty dùng?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 3
+  },
+  "chunk_0393": {
+    "content": "nối từ xa ===\n\nQ: Phần mềm VPN nào công ty dùng?\nA: Công ty sử dụng Cisco AnyConnect. Download tại https://vpn.company.internal/download.\n\nQ: Tôi bị mất kết nối VPN liên tục, phải làm gì?\nA: Kiểm tra kết nối Internet trước. Nếu vẫn lỗi, tạo ticket P3 với log file VPN đính kèm.",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 4
+  },
+  "chunk_0394": {
+    "content": "ẫn lỗi, tạo ticket P3 với log file VPN đính kèm.\n\nQ: VPN có giới hạn số thiết bị không?\nA: Mỗi tài khoản được kết nối VPN trên tối đa 2 thiết bị cùng lúc.\n\n=== Section 3: Phần mềm và license ===\n\nQ: Tôi cần cài phần mềm mới, phải làm gì?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 5
+  },
+  "chunk_0395": {
+    "content": "se ===\n\nQ: Tôi cần cài phần mềm mới, phải làm gì?\nA: Gửi yêu cầu qua Jira project IT-SOFTWARE. Line Manager phải phê duyệt trước khi IT cài đặt.\n\nQ: Ai chịu trách nhiệm gia hạn license phần mềm?\nA: IT Procurement team quản lý tất cả license. Nhắc nhở sẽ được gửi 30 ngày trước khi hết hạn.",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 6
+  },
+  "chunk_0396": {
+    "content": "Nhắc nhở sẽ được gửi 30 ngày trước khi hết hạn.\n\n=== Section 4: Thiết bị và phần cứng ===\n\nQ: Laptop mới được cấp sau bao lâu khi vào công ty?\nA: Laptop được cấp trong ngày onboarding đầu tiên. Nếu có vấn đề, liên hệ HR hoặc IT Admin.\n\nQ: Laptop bị hỏng phải báo cáo như thế nào?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 7
+  },
+  "chunk_0397": {
+    "content": "min.\n\nQ: Laptop bị hỏng phải báo cáo như thế nào?\nA: Tạo ticket P2 hoặc P3 tùy mức độ nghiêm trọng. Mang thiết bị đến IT Room (tầng 3) để kiểm tra.\n\n=== Section 5: Email và lịch ===\n\nQ: Hộp thư đến đầy, phải làm gì?",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 8
+  },
+  "chunk_0398": {
+    "content": "ail và lịch ===\n\nQ: Hộp thư đến đầy, phải làm gì?\nA: Xóa email cũ hoặc yêu cầu tăng dung lượng qua ticket IT-ACCESS. Dung lượng tiêu chuẩn là 50GB.\n\nQ: Tôi không nhận được email từ bên ngoài?\nA: Kiểm tra thư mục Spam trước. Nếu vẫn không có, tạo ticket P2 kèm địa chỉ email gửi và thời gian gửi.",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 9
+  },
+  "chunk_0399": {
+    "content": "icket P2 kèm địa chỉ email gửi và thời gian gửi.\n\n=== Section 6: Liên hệ IT Helpdesk ===\nHotline: ext. 9000 (8:00 - 18:00, Thứ 2 - Thứ 6)\nEmail: helpdesk@company.internal\nJira: project IT-SUPPORT\nSlack: #it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 10
+  },
+  "chunk_0400": {
+    "content": "ck: #it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 11
+  },
+  "chunk_0401": {
+    "content": "k: #it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 12
+  },
+  "chunk_0402": {
+    "content": ": #it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 13
+  },
+  "chunk_0403": {
+    "content": "#it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 14
+  },
+  "chunk_0404": {
+    "content": "#it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 15
+  },
+  "chunk_0405": {
+    "content": "it-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 16
+  },
+  "chunk_0406": {
+    "content": "t-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 17
+  },
+  "chunk_0407": {
+    "content": "-helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 18
+  },
+  "chunk_0408": {
+    "content": "helpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 19
+  },
+  "chunk_0409": {
+    "content": "elpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 20
+  },
+  "chunk_0410": {
+    "content": "lpdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 21
+  },
+  "chunk_0411": {
+    "content": "pdesk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 22
+  },
+  "chunk_0412": {
+    "content": "desk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 23
+  },
+  "chunk_0413": {
+    "content": "esk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 24
+  },
+  "chunk_0414": {
+    "content": "sk\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 25
+  },
+  "chunk_0415": {
+    "content": "k\nEmergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 26
+  },
+  "chunk_0416": {
+    "content": "Emergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 27
+  },
+  "chunk_0417": {
+    "content": "Emergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 28
+  },
+  "chunk_0418": {
+    "content": "mergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 29
+  },
+  "chunk_0419": {
+    "content": "ergency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 30
+  },
+  "chunk_0420": {
+    "content": "rgency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 31
+  },
+  "chunk_0421": {
+    "content": "gency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 32
+  },
+  "chunk_0422": {
+    "content": "ency (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 33
+  },
+  "chunk_0423": {
+    "content": "ncy (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 34
+  },
+  "chunk_0424": {
+    "content": "cy (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 35
+  },
+  "chunk_0425": {
+    "content": "y (ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 36
+  },
+  "chunk_0426": {
+    "content": "(ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 37
+  },
+  "chunk_0427": {
+    "content": "(ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 38
+  },
+  "chunk_0428": {
+    "content": "ngoài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 39
+  },
+  "chunk_0429": {
+    "content": "goài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 40
+  },
+  "chunk_0430": {
+    "content": "oài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 41
+  },
+  "chunk_0431": {
+    "content": "ài giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 42
+  },
+  "chunk_0432": {
+    "content": "i giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 43
+  },
+  "chunk_0433": {
+    "content": "giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 44
+  },
+  "chunk_0434": {
+    "content": "giờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 45
+  },
+  "chunk_0435": {
+    "content": "iờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 46
+  },
+  "chunk_0436": {
+    "content": "ờ): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 47
+  },
+  "chunk_0437": {
+    "content": "): ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 48
+  },
+  "chunk_0438": {
+    "content": ": ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 49
+  },
+  "chunk_0439": {
+    "content": "ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 50
+  },
+  "chunk_0440": {
+    "content": "ext. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 51
+  },
+  "chunk_0441": {
+    "content": "xt. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 52
+  },
+  "chunk_0442": {
+    "content": "t. 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 53
+  },
+  "chunk_0443": {
+    "content": ". 9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 54
+  },
+  "chunk_0444": {
+    "content": "9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 55
+  },
+  "chunk_0445": {
+    "content": "9999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 56
+  },
+  "chunk_0446": {
+    "content": "999",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 57
+  },
+  "chunk_0447": {
+    "content": "99",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 58
+  },
+  "chunk_0448": {
+    "content": "9",
+    "source": "support/helpdesk-faq.md",
+    "filename": "it_helpdesk_faq.txt",
+    "department": "IT",
+    "chunk_index": 59
+  },
+  "chunk_0449": {
+    "content": "QUY TRÌNH OFFBOARDING NHÂN VIÊN\nSource: hr/offboarding-sop.md\nDepartment: HR\nEffective Date: 2026-01-25\nAccess: internal\n\n=== Section 1: Mục đích ===\nĐảm bảo việc nghỉ việc của nhân viên được xử lý đầy đủ, an toàn và không gây rủi ro cho hệ thống.\n\n=== Section 2: Thông báo nghỉ việc ===",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 0
+  },
+  "chunk_0450": {
+    "content": "ệ thống.\n\n=== Section 2: Thông báo nghỉ việc ===\n\n- Nhân viên gửi đơn nghỉ việc trước:\n  + 30 ngày (nhân viên chính thức)\n  + 7 ngày (probation)\n\n- HR xác nhận và tạo offboarding checklist\n\n=== Section 3: Thu hồi tài sản ===\n\n- Laptop, thiết bị\n- Thẻ nhân viên\n- Tài liệu nội bộ",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 1
+  },
+  "chunk_0451": {
+    "content": "ptop, thiết bị\n- Thẻ nhân viên\n- Tài liệu nội bộ\n\nThời hạn: trước ngày làm việc cuối\n\n=== Section 4: Thu hồi quyền truy cập ===\n\n- Disable email và hệ thống trong ngày cuối\n- Thu hồi VPN, admin access ngay lập tức\n\n=== Section 5: Exit interview ===\n\n- HR thực hiện phỏng vấn nghỉ việc",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 2
+  },
+  "chunk_0452": {
+    "content": "interview ===\n\n- HR thực hiện phỏng vấn nghỉ việc\n- Ghi nhận feedback\n\n=== Section 6: Thanh toán cuối ===\n\n- Lương còn lại\n- Phép chưa sử dụng\n- Hoàn ứng chi phí (nếu có)\n\n=== Section 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 3
+  },
+  "chunk_0453": {
+    "content": "Section 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 4
+  },
+  "chunk_0454": {
+    "content": "Section 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 5
+  },
+  "chunk_0455": {
+    "content": "ection 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 6
+  },
+  "chunk_0456": {
+    "content": "ction 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 7
+  },
+  "chunk_0457": {
+    "content": "tion 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 8
+  },
+  "chunk_0458": {
+    "content": "ion 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 9
+  },
+  "chunk_0459": {
+    "content": "on 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 10
+  },
+  "chunk_0460": {
+    "content": "n 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 11
+  },
+  "chunk_0461": {
+    "content": "7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 12
+  },
+  "chunk_0462": {
+    "content": "7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 13
+  },
+  "chunk_0463": {
+    "content": ": Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 14
+  },
+  "chunk_0464": {
+    "content": "Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 15
+  },
+  "chunk_0465": {
+    "content": "Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 16
+  },
+  "chunk_0466": {
+    "content": "iên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 17
+  },
+  "chunk_0467": {
+    "content": "ên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 18
+  },
+  "chunk_0468": {
+    "content": "n hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 19
+  },
+  "chunk_0469": {
+    "content": "hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 20
+  },
+  "chunk_0470": {
+    "content": "hệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 21
+  },
+  "chunk_0471": {
+    "content": "ệ ===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 22
+  },
+  "chunk_0472": {
+    "content": "===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 23
+  },
+  "chunk_0473": {
+    "content": "===\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 24
+  },
+  "chunk_0474": {
+    "content": "==\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 25
+  },
+  "chunk_0475": {
+    "content": "=\nEmail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 26
+  },
+  "chunk_0476": {
+    "content": "Email: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 27
+  },
+  "chunk_0477": {
+    "content": "Email: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 28
+  },
+  "chunk_0478": {
+    "content": "mail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 29
+  },
+  "chunk_0479": {
+    "content": "ail: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 30
+  },
+  "chunk_0480": {
+    "content": "il: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 31
+  },
+  "chunk_0481": {
+    "content": "l: hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 32
+  },
+  "chunk_0482": {
+    "content": ": hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 33
+  },
+  "chunk_0483": {
+    "content": "hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 34
+  },
+  "chunk_0484": {
+    "content": "hr@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 35
+  },
+  "chunk_0485": {
+    "content": "r@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 36
+  },
+  "chunk_0486": {
+    "content": "@company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 37
+  },
+  "chunk_0487": {
+    "content": "company.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 38
+  },
+  "chunk_0488": {
+    "content": "ompany.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 39
+  },
+  "chunk_0489": {
+    "content": "mpany.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 40
+  },
+  "chunk_0490": {
+    "content": "pany.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 41
+  },
+  "chunk_0491": {
+    "content": "any.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 42
+  },
+  "chunk_0492": {
+    "content": "ny.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 43
+  },
+  "chunk_0493": {
+    "content": "y.internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 44
+  },
+  "chunk_0494": {
+    "content": ".internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 45
+  },
+  "chunk_0495": {
+    "content": "internal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 46
+  },
+  "chunk_0496": {
+    "content": "nternal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 47
+  },
+  "chunk_0497": {
+    "content": "ternal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 48
+  },
+  "chunk_0498": {
+    "content": "ernal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 49
+  },
+  "chunk_0499": {
+    "content": "rnal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 50
+  },
+  "chunk_0500": {
+    "content": "nal",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 51
+  },
+  "chunk_0501": {
+    "content": "al",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 52
+  },
+  "chunk_0502": {
+    "content": "l",
+    "source": "hr/offboarding-sop.md",
+    "filename": "offboarding_sop.txt",
+    "department": "HR",
+    "chunk_index": 53
+  },
+  "chunk_0503": {
+    "content": "CHÍNH SÁCH HOÀN TIỀN - PHIÊN BẢN 4\nSource: policy/refund-v4.pdf\nDepartment: CS\nEffective Date: 2026-02-01\nAccess: internal\n\n=== Điều 1: Phạm vi áp dụng ===\nChính sách này áp dụng cho tất cả các đơn hàng được đặt trên hệ thống nội bộ kể từ ngày 01/02/2026.",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 0
+  },
+  "chunk_0504": {
+    "content": "c đặt trên hệ thống nội bộ kể từ ngày 01/02/2026.\nCác đơn hàng đặt trước ngày có hiệu lực sẽ áp dụng theo chính sách hoàn tiền phiên bản 3.\n\n=== Điều 2: Điều kiện được hoàn tiền ===\nKhách hàng được quyền yêu cầu hoàn tiền khi đáp ứng đủ các điều kiện sau:",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 1
+  },
+  "chunk_0505": {
+    "content": "u cầu hoàn tiền khi đáp ứng đủ các điều kiện sau:\n- Sản phẩm bị lỗi do nhà sản xuất, không phải do người dùng.\n- Yêu cầu được gửi trong vòng 7 ngày làm việc kể từ thời điểm xác nhận đơn hàng.\n- Đơn hàng chưa được sử dụng hoặc chưa bị mở seal.\n\n=== Điều 3: Điều kiện áp dụng và ngoại lệ ===",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 2
+  },
+  "chunk_0506": {
+    "content": "l.\n\n=== Điều 3: Điều kiện áp dụng và ngoại lệ ===\nHoàn tiền — Điều kiện áp dụng:\nYêu cầu được gửi trong vòng 7 ngày kể từ thời điểm xác nhận đơn hàng.\n\nNgoại lệ không được hoàn tiền:\n- Sản phẩm thuộc danh mục hàng kỹ thuật số (license key, subscription).",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 3
+  },
+  "chunk_0507": {
+    "content": "mục hàng kỹ thuật số (license key, subscription).\n- Đơn hàng đã áp dụng mã giảm giá đặc biệt theo chương trình khuyến mãi Flash Sale.\n- Sản phẩm đã được kích hoạt hoặc đăng ký tài khoản.\n\n=== Điều 4: Quy trình xử lý yêu cầu hoàn tiền ===",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 4
+  },
+  "chunk_0508": {
+    "content": "=== Điều 4: Quy trình xử lý yêu cầu hoàn tiền ===\nBước 1: Khách hàng gửi yêu cầu qua hệ thống ticket nội bộ với category \"Refund Request\".\nBước 2: CS Agent xem xét trong vòng 1 ngày làm việc và xác nhận điều kiện đủ điều kiện.",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 5
+  },
+  "chunk_0509": {
+    "content": "ngày làm việc và xác nhận điều kiện đủ điều kiện.\nBước 3: Nếu đủ điều kiện, chuyển yêu cầu sang Finance Team để xử lý hoàn tiền.\nBước 4: Finance Team xử lý trong 3-5 ngày làm việc và thông báo kết quả cho khách hàng.\n\n=== Điều 5: Hình thức hoàn tiền ===",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 6
+  },
+  "chunk_0510": {
+    "content": "khách hàng.\n\n=== Điều 5: Hình thức hoàn tiền ===\n- Hoàn tiền qua phương thức thanh toán gốc: áp dụng trong 100% trường hợp đủ điều kiện.\n- Hoàn tiền qua credit nội bộ (store credit): khách hàng có thể chọn nhận store credit thay thế với giá trị 110% so với số tiền hoàn.",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 7
+  },
+  "chunk_0511": {
+    "content": "t thay thế với giá trị 110% so với số tiền hoàn.\n\n=== Điều 6: Liên hệ và hỗ trợ ===\nEmail: cs-refund@company.internal\nHotline nội bộ: ext. 1234\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 8
+  },
+  "chunk_0512": {
+    "content": "t. 1234\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 9
+  },
+  "chunk_0513": {
+    "content": ". 1234\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 10
+  },
+  "chunk_0514": {
+    "content": "1234\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 11
+  },
+  "chunk_0515": {
+    "content": "1234\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 12
+  },
+  "chunk_0516": {
+    "content": "234\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 13
+  },
+  "chunk_0517": {
+    "content": "34\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 14
+  },
+  "chunk_0518": {
+    "content": "4\nGiờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 15
+  },
+  "chunk_0519": {
+    "content": "Giờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 16
+  },
+  "chunk_0520": {
+    "content": "Giờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 17
+  },
+  "chunk_0521": {
+    "content": "iờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 18
+  },
+  "chunk_0522": {
+    "content": "ờ làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 19
+  },
+  "chunk_0523": {
+    "content": "làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 20
+  },
+  "chunk_0524": {
+    "content": "làm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 21
+  },
+  "chunk_0525": {
+    "content": "àm việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 22
+  },
+  "chunk_0526": {
+    "content": "m việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 23
+  },
+  "chunk_0527": {
+    "content": "việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 24
+  },
+  "chunk_0528": {
+    "content": "việc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 25
+  },
+  "chunk_0529": {
+    "content": "iệc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 26
+  },
+  "chunk_0530": {
+    "content": "ệc: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 27
+  },
+  "chunk_0531": {
+    "content": "c: Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 28
+  },
+  "chunk_0532": {
+    "content": ": Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 29
+  },
+  "chunk_0533": {
+    "content": "Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 30
+  },
+  "chunk_0534": {
+    "content": "Thứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 31
+  },
+  "chunk_0535": {
+    "content": "hứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 32
+  },
+  "chunk_0536": {
+    "content": "ứ 2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 33
+  },
+  "chunk_0537": {
+    "content": "2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 34
+  },
+  "chunk_0538": {
+    "content": "2 - Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 35
+  },
+  "chunk_0539": {
+    "content": "- Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 36
+  },
+  "chunk_0540": {
+    "content": "- Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 37
+  },
+  "chunk_0541": {
+    "content": "Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 38
+  },
+  "chunk_0542": {
+    "content": "Thứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 39
+  },
+  "chunk_0543": {
+    "content": "hứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 40
+  },
+  "chunk_0544": {
+    "content": "ứ 6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 41
+  },
+  "chunk_0545": {
+    "content": "6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 42
+  },
+  "chunk_0546": {
+    "content": "6, 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 43
+  },
+  "chunk_0547": {
+    "content": ", 8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 44
+  },
+  "chunk_0548": {
+    "content": "8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 45
+  },
+  "chunk_0549": {
+    "content": "8:00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 46
+  },
+  "chunk_0550": {
+    "content": ":00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 47
+  },
+  "chunk_0551": {
+    "content": "00 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 48
+  },
+  "chunk_0552": {
+    "content": "0 - 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 49
+  },
+  "chunk_0553": {
+    "content": "- 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 50
+  },
+  "chunk_0554": {
+    "content": "- 17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 51
+  },
+  "chunk_0555": {
+    "content": "17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 52
+  },
+  "chunk_0556": {
+    "content": "17:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 53
+  },
+  "chunk_0557": {
+    "content": "7:30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 54
+  },
+  "chunk_0558": {
+    "content": ":30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 55
+  },
+  "chunk_0559": {
+    "content": "30",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 56
+  },
+  "chunk_0560": {
+    "content": "0",
+    "source": "policy/refund-v4.pdf",
+    "filename": "policy_refund_v4.txt",
+    "department": "CS",
+    "chunk_index": 57
+  },
+  "chunk_0561": {
+    "content": "QUY TRÌNH MUA SẮM NỘI BỘ\nSource: finance/procurement-sop.md\nDepartment: Finance\nEffective Date: 2026-02-01\nAccess: internal\n\n=== Section 1: Phạm vi ===\nÁp dụng cho tất cả yêu cầu mua sắm hàng hóa, dịch vụ phục vụ hoạt động công ty.\n\n=== Section 2: Quy trình mua sắm ===",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 0
+  },
+  "chunk_0562": {
+    "content": "g công ty.\n\n=== Section 2: Quy trình mua sắm ===\n\nBước 1: Tạo Purchase Request (PR) trên hệ thống\nBước 2: Line Manager phê duyệt\nBước 3: Finance kiểm tra ngân sách\nBước 4: Procurement tìm vendor và báo giá\nBước 5: Phê duyệt cuối và đặt hàng\n\n=== Section 3: SLA xử lý ===\n\n- PR < 10 triệu:",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 1
+  },
+  "chunk_0563": {
+    "content": "g\n\n=== Section 3: SLA xử lý ===\n\n- PR < 10 triệu:\n  + Xử lý: 2 ngày làm việc\n\n- PR 10 - 100 triệu:\n  + Xử lý: 5 ngày làm việc\n\n- PR > 100 triệu:\n  + Xử lý: 7 ngày làm việc\n  + Yêu cầu 3 báo giá\n\n=== Section 4: Quy định vendor ===\n\n- Vendor phải nằm trong danh sách approved\n- Hợp đồng bắt buộc:",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 2
+  },
+  "chunk_0564": {
+    "content": "nằm trong danh sách approved\n- Hợp đồng bắt buộc:\n  + Đơn > 50 triệu\n  + Dịch vụ dài hạn\n\n=== Section 5: Kiểm soát và audit ===\n\n- Finance audit định kỳ mỗi quý\n- Mọi vi phạm phải báo cáo trong 24 giờ\n\n=== Section 6: Liên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 3
+  },
+  "chunk_0565": {
+    "content": "6: Liên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 4
+  },
+  "chunk_0566": {
+    "content": ": Liên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 5
+  },
+  "chunk_0567": {
+    "content": "Liên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 6
+  },
+  "chunk_0568": {
+    "content": "Liên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 7
+  },
+  "chunk_0569": {
+    "content": "iên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 8
+  },
+  "chunk_0570": {
+    "content": "ên hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 9
+  },
+  "chunk_0571": {
+    "content": "n hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 10
+  },
+  "chunk_0572": {
+    "content": "hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 11
+  },
+  "chunk_0573": {
+    "content": "hệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 12
+  },
+  "chunk_0574": {
+    "content": "ệ ===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 13
+  },
+  "chunk_0575": {
+    "content": "===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 14
+  },
+  "chunk_0576": {
+    "content": "===\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 15
+  },
+  "chunk_0577": {
+    "content": "==\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 16
+  },
+  "chunk_0578": {
+    "content": "=\nEmail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 17
+  },
+  "chunk_0579": {
+    "content": "Email: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 18
+  },
+  "chunk_0580": {
+    "content": "Email: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 19
+  },
+  "chunk_0581": {
+    "content": "mail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 20
+  },
+  "chunk_0582": {
+    "content": "ail: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 21
+  },
+  "chunk_0583": {
+    "content": "il: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 22
+  },
+  "chunk_0584": {
+    "content": "l: procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 23
+  },
+  "chunk_0585": {
+    "content": ": procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 24
+  },
+  "chunk_0586": {
+    "content": "procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 25
+  },
+  "chunk_0587": {
+    "content": "procurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 26
+  },
+  "chunk_0588": {
+    "content": "rocurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 27
+  },
+  "chunk_0589": {
+    "content": "ocurement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 28
+  },
+  "chunk_0590": {
+    "content": "curement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 29
+  },
+  "chunk_0591": {
+    "content": "urement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 30
+  },
+  "chunk_0592": {
+    "content": "rement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 31
+  },
+  "chunk_0593": {
+    "content": "ement@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 32
+  },
+  "chunk_0594": {
+    "content": "ment@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 33
+  },
+  "chunk_0595": {
+    "content": "ent@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 34
+  },
+  "chunk_0596": {
+    "content": "nt@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 35
+  },
+  "chunk_0597": {
+    "content": "t@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 36
+  },
+  "chunk_0598": {
+    "content": "@company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 37
+  },
+  "chunk_0599": {
+    "content": "company.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 38
+  },
+  "chunk_0600": {
+    "content": "ompany.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 39
+  },
+  "chunk_0601": {
+    "content": "mpany.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 40
+  },
+  "chunk_0602": {
+    "content": "pany.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 41
+  },
+  "chunk_0603": {
+    "content": "any.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 42
+  },
+  "chunk_0604": {
+    "content": "ny.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 43
+  },
+  "chunk_0605": {
+    "content": "y.internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 44
+  },
+  "chunk_0606": {
+    "content": ".internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 45
+  },
+  "chunk_0607": {
+    "content": "internal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 46
+  },
+  "chunk_0608": {
+    "content": "nternal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 47
+  },
+  "chunk_0609": {
+    "content": "ternal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 48
+  },
+  "chunk_0610": {
+    "content": "ernal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 49
+  },
+  "chunk_0611": {
+    "content": "rnal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 50
+  },
+  "chunk_0612": {
+    "content": "nal",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 51
+  },
+  "chunk_0613": {
+    "content": "al",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 52
+  },
+  "chunk_0614": {
+    "content": "l",
+    "source": "finance/procurement-sop.md",
+    "filename": "procurement_sop.txt",
+    "department": "Finance",
+    "chunk_index": 53
+  },
+  "chunk_0615": {
+    "content": "CHÍNH SÁCH MẬT KHẨU VÀ BẢO MẬT TÀI KHOẢN\nSource: security/password-policy-2026.md\nDepartment: IT Security\nEffective Date: 2026-01-10\nAccess: internal\n\n=== Section 1: Mục đích ===",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 0
+  },
+  "chunk_0616": {
+    "content": "-10\nAccess: internal\n\n=== Section 1: Mục đích ===\nChính sách này quy định tiêu chuẩn về mật khẩu và bảo mật tài khoản nhằm giảm thiểu rủi ro bị truy cập trái phép vào hệ thống nội bộ.\n\n=== Section 2: Yêu cầu mật khẩu ===\n\n- Độ dài tối thiểu: 12 ký tự\n- Phải bao gồm:\n  + Ít nhất 1 chữ hoa (A-Z)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 1
+  },
+  "chunk_0617": {
+    "content": "ký tự\n- Phải bao gồm:\n  + Ít nhất 1 chữ hoa (A-Z)\n  + Ít nhất 1 chữ thường (a-z)\n  + Ít nhất 1 số (0-9)\n  + Ít nhất 1 ký tự đặc biệt (!@#$%^&*)\n\n- Không được chứa:\n  + Tên người dùng hoặc email\n  + Tên công ty hoặc sản phẩm\n  + Chuỗi phổ biến (123456, password, qwerty)\n\nVí dụ hợp lệ: Abc@12345678",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 2
+  },
+  "chunk_0618": {
+    "content": "56, password, qwerty)\n\nVí dụ hợp lệ: Abc@12345678\nVí dụ không hợp lệ: company123\n\n=== Section 3: Chu kỳ thay đổi mật khẩu ===\n\n- Mật khẩu phải được thay đổi mỗi 90 ngày\n- Hệ thống sẽ gửi cảnh báo trước 7 ngày\n- Không được sử dụng lại 5 mật khẩu gần nhất",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 3
+  },
+  "chunk_0619": {
+    "content": "gày\n- Không được sử dụng lại 5 mật khẩu gần nhất\n\n=== Section 4: Quản lý tài khoản và vi phạm ===\n\n- Tài khoản bị khóa sau 5 lần đăng nhập sai liên tiếp\n- Thời gian khóa: 30 phút hoặc đến khi reset\n- Nhân viên phải báo ngay cho IT nếu nghi ngờ bị lộ mật khẩu",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 4
+  },
+  "chunk_0620": {
+    "content": "phải báo ngay cho IT nếu nghi ngờ bị lộ mật khẩu\n\n=== Section 5: Multi-Factor Authentication (MFA) ===\n\n- Bắt buộc cho:\n  + Level 3 trở lên\n  + Tài khoản admin\n  + Remote access\n\n- Phương thức:\n  + Google Authenticator\n  + Okta Verify\n\n=== Section 6: Trách nhiệm người dùng ===",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 5
+  },
+  "chunk_0621": {
+    "content": "erify\n\n=== Section 6: Trách nhiệm người dùng ===\n\n- Không chia sẻ mật khẩu với bất kỳ ai\n- Không lưu mật khẩu trên giấy hoặc file không mã hóa\n- Phải khóa màn hình khi rời máy\n\n=== Section 7: Liên hệ ===\nEmail: security@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 6
+  },
+  "chunk_0622": {
+    "content": "ecurity@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 7
+  },
+  "chunk_0623": {
+    "content": "curity@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 8
+  },
+  "chunk_0624": {
+    "content": "urity@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 9
+  },
+  "chunk_0625": {
+    "content": "rity@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 10
+  },
+  "chunk_0626": {
+    "content": "ity@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 11
+  },
+  "chunk_0627": {
+    "content": "ty@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 12
+  },
+  "chunk_0628": {
+    "content": "y@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 13
+  },
+  "chunk_0629": {
+    "content": "@company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 14
+  },
+  "chunk_0630": {
+    "content": "company.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 15
+  },
+  "chunk_0631": {
+    "content": "ompany.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 16
+  },
+  "chunk_0632": {
+    "content": "mpany.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 17
+  },
+  "chunk_0633": {
+    "content": "pany.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 18
+  },
+  "chunk_0634": {
+    "content": "any.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 19
+  },
+  "chunk_0635": {
+    "content": "ny.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 20
+  },
+  "chunk_0636": {
+    "content": "y.internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 21
+  },
+  "chunk_0637": {
+    "content": ".internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 22
+  },
+  "chunk_0638": {
+    "content": "internal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 23
+  },
+  "chunk_0639": {
+    "content": "nternal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 24
+  },
+  "chunk_0640": {
+    "content": "ternal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 25
+  },
+  "chunk_0641": {
+    "content": "ernal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 26
+  },
+  "chunk_0642": {
+    "content": "rnal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 27
+  },
+  "chunk_0643": {
+    "content": "nal\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 28
+  },
+  "chunk_0644": {
+    "content": "al\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 29
+  },
+  "chunk_0645": {
+    "content": "l\nHotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 30
+  },
+  "chunk_0646": {
+    "content": "Hotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 31
+  },
+  "chunk_0647": {
+    "content": "Hotline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 32
+  },
+  "chunk_0648": {
+    "content": "otline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 33
+  },
+  "chunk_0649": {
+    "content": "tline: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 34
+  },
+  "chunk_0650": {
+    "content": "line: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 35
+  },
+  "chunk_0651": {
+    "content": "ine: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 36
+  },
+  "chunk_0652": {
+    "content": "ne: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 37
+  },
+  "chunk_0653": {
+    "content": "e: ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 38
+  },
+  "chunk_0654": {
+    "content": ": ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 39
+  },
+  "chunk_0655": {
+    "content": "ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 40
+  },
+  "chunk_0656": {
+    "content": "ext. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 41
+  },
+  "chunk_0657": {
+    "content": "xt. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 42
+  },
+  "chunk_0658": {
+    "content": "t. 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 43
+  },
+  "chunk_0659": {
+    "content": ". 9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 44
+  },
+  "chunk_0660": {
+    "content": "9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 45
+  },
+  "chunk_0661": {
+    "content": "9111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 46
+  },
+  "chunk_0662": {
+    "content": "111 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 47
+  },
+  "chunk_0663": {
+    "content": "11 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 48
+  },
+  "chunk_0664": {
+    "content": "1 (24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 49
+  },
+  "chunk_0665": {
+    "content": "(24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 50
+  },
+  "chunk_0666": {
+    "content": "(24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 51
+  },
+  "chunk_0667": {
+    "content": "24/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 52
+  },
+  "chunk_0668": {
+    "content": "4/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 53
+  },
+  "chunk_0669": {
+    "content": "/7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 54
+  },
+  "chunk_0670": {
+    "content": "7)",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 55
+  },
+  "chunk_0671": {
+    "content": ")",
+    "source": "security/password-policy-2026.md",
+    "filename": "security_password_policy.txt",
+    "department": "IT Security",
+    "chunk_index": 56
+  },
+  "chunk_0672": {
+    "content": "SLA TICKET - QUY ĐỊNH XỬ LÝ SỰ CỐ\nSource: support/sla-p1-2026.pdf\nDepartment: IT\nEffective Date: 2026-01-15\nAccess: internal\n\n=== Phần 1: Định nghĩa mức độ ưu tiên ===\n\nP1 — CRITICAL (Khẩn cấp):\nĐịnh nghĩa: Sự cố ảnh hưởng toàn bộ hệ thống production, không có workaround.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 0
+  },
+  "chunk_0673": {
+    "content": "toàn bộ hệ thống production, không có workaround.\nVí dụ: Database sập, API gateway down, toàn bộ người dùng không thể đăng nhập.\n\nP2 — HIGH (Nghiêm trọng):\nĐịnh nghĩa: Sự cố ảnh hưởng một phần hệ thống, có workaround tạm thời.\nVí dụ: Một số tính năng không hoạt động, ảnh hưởng một nhóm người dùng.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 1
+  },
+  "chunk_0674": {
+    "content": "không hoạt động, ảnh hưởng một nhóm người dùng.\n\nP3 — MEDIUM (Trung bình):\nĐịnh nghĩa: Lỗi ảnh hưởng không đáng kể, người dùng vẫn làm việc được.\n\nP4 — LOW (Thấp):\nĐịnh nghĩa: Yêu cầu cải tiến, gợi ý, hoặc lỗi giao diện nhỏ.\n\n=== Phần 2: SLA theo mức độ ưu tiên ===\n\nTicket P1:",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 2
+  },
+  "chunk_0675": {
+    "content": "= Phần 2: SLA theo mức độ ưu tiên ===\n\nTicket P1:\n- Phản hồi ban đầu (first response): 15 phút kể từ khi ticket được tạo.\n- Xử lý và khắc phục (resolution): 4 giờ.\n- Escalation: Tự động escalate lên Senior Engineer nếu không có phản hồi trong 10 phút.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 3
+  },
+  "chunk_0676": {
+    "content": "ior Engineer nếu không có phản hồi trong 10 phút.\n- Thông báo stakeholder: Ngay khi nhận ticket, update mỗi 30 phút cho đến khi resolve.\n\nTicket P2:\n- Phản hồi ban đầu: 2 giờ.\n- Xử lý và khắc phục: 1 ngày làm việc.\n- Escalation: Tự động escalate sau 90 phút không có phản hồi.\n\nTicket P3:",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 4
+  },
+  "chunk_0677": {
+    "content": "calate sau 90 phút không có phản hồi.\n\nTicket P3:\n- Phản hồi ban đầu: 1 ngày làm việc.\n- Xử lý và khắc phục: 5 ngày làm việc.\n\nTicket P4:\n- Phản hồi ban đầu: 3 ngày làm việc.\n- Xử lý và khắc phục: Theo sprint cycle (thông thường 2-4 tuần).\n\n=== Phần 3: Quy trình xử lý sự cố P1 ===",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 5
+  },
+  "chunk_0678": {
+    "content": "tuần).\n\n=== Phần 3: Quy trình xử lý sự cố P1 ===\n\nBước 1: Tiếp nhận\nOn-call engineer nhận alert hoặc ticket, xác nhận severity trong 5 phút.\n\nBước 2: Thông báo\nGửi thông báo tới Slack #incident-p1 và email incident@company.internal ngay lập tức.\n\nBước 3: Triage và phân công",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 6
+  },
+  "chunk_0679": {
+    "content": "ternal ngay lập tức.\n\nBước 3: Triage và phân công\nLead Engineer phân công engineer xử lý trong 10 phút.\n\nBước 4: Xử lý\nEngineer cập nhật tiến độ lên ticket mỗi 30 phút. Nếu cần hỗ trợ thêm, escalate ngay.\n\nBước 5: Resolution\nSau khi khắc phục, viết incident report trong vòng 24 giờ.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 7
+  },
+  "chunk_0680": {
+    "content": "ắc phục, viết incident report trong vòng 24 giờ.\n\n=== Phần 4: Công cụ và kênh liên lạc ===\nTicket system: Jira (project IT-SUPPORT)\nSlack channel: #incident-p1, #incident-p2\nPagerDuty: Tự động nhắn on-call khi P1 ticket mới\nHotline on-call: ext. 9999 (24/7)\n\n=== Phần 5: Lịch sử phiên bản ===",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 8
+  },
+  "chunk_0681": {
+    "content": "t. 9999 (24/7)\n\n=== Phần 5: Lịch sử phiên bản ===\nv2026.1 (2026-01-15): Cập nhật SLA P1 resolution từ 6 giờ xuống 4 giờ.\nv2025.3 (2025-09-01): Thêm quy trình escalation tự động.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 9
+  },
+  "chunk_0682": {
+    "content": "ự động.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 10
+  },
+  "chunk_0683": {
+    "content": "động.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 11
+  },
+  "chunk_0684": {
+    "content": "động.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 12
+  },
+  "chunk_0685": {
+    "content": "ộng.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 13
+  },
+  "chunk_0686": {
+    "content": "ng.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 14
+  },
+  "chunk_0687": {
+    "content": "g.\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 15
+  },
+  "chunk_0688": {
+    "content": ".\nv2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 16
+  },
+  "chunk_0689": {
+    "content": "v2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 17
+  },
+  "chunk_0690": {
+    "content": "v2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 18
+  },
+  "chunk_0691": {
+    "content": "2025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 19
+  },
+  "chunk_0692": {
+    "content": "025.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 20
+  },
+  "chunk_0693": {
+    "content": "25.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 21
+  },
+  "chunk_0694": {
+    "content": "5.1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 22
+  },
+  "chunk_0695": {
+    "content": ".1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 23
+  },
+  "chunk_0696": {
+    "content": "1 (2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 24
+  },
+  "chunk_0697": {
+    "content": "(2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 25
+  },
+  "chunk_0698": {
+    "content": "(2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 26
+  },
+  "chunk_0699": {
+    "content": "2025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 27
+  },
+  "chunk_0700": {
+    "content": "025-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 28
+  },
+  "chunk_0701": {
+    "content": "25-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 29
+  },
+  "chunk_0702": {
+    "content": "5-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 30
+  },
+  "chunk_0703": {
+    "content": "-03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 31
+  },
+  "chunk_0704": {
+    "content": "03-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 32
+  },
+  "chunk_0705": {
+    "content": "3-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 33
+  },
+  "chunk_0706": {
+    "content": "-01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 34
+  },
+  "chunk_0707": {
+    "content": "01): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 35
+  },
+  "chunk_0708": {
+    "content": "1): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 36
+  },
+  "chunk_0709": {
+    "content": "): Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 37
+  },
+  "chunk_0710": {
+    "content": ": Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 38
+  },
+  "chunk_0711": {
+    "content": "Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 39
+  },
+  "chunk_0712": {
+    "content": "Phiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 40
+  },
+  "chunk_0713": {
+    "content": "hiên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 41
+  },
+  "chunk_0714": {
+    "content": "iên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 42
+  },
+  "chunk_0715": {
+    "content": "ên bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 43
+  },
+  "chunk_0716": {
+    "content": "n bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 44
+  },
+  "chunk_0717": {
+    "content": "bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 45
+  },
+  "chunk_0718": {
+    "content": "bản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 46
+  },
+  "chunk_0719": {
+    "content": "ản đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 47
+  },
+  "chunk_0720": {
+    "content": "n đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 48
+  },
+  "chunk_0721": {
+    "content": "đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 49
+  },
+  "chunk_0722": {
+    "content": "đầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 50
+  },
+  "chunk_0723": {
+    "content": "ầu tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 51
+  },
+  "chunk_0724": {
+    "content": "u tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 52
+  },
+  "chunk_0725": {
+    "content": "tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 53
+  },
+  "chunk_0726": {
+    "content": "tiên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 54
+  },
+  "chunk_0727": {
+    "content": "iên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 55
+  },
+  "chunk_0728": {
+    "content": "ên.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 56
+  },
+  "chunk_0729": {
+    "content": "n.",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 57
+  },
+  "chunk_0730": {
+    "content": ".",
+    "source": "support/sla-p1-2026.pdf",
+    "filename": "sla_p1_2026.txt",
+    "department": "IT",
+    "chunk_index": 58
+  },
+  "chunk_0731": {
+    "content": "CHÍNH SÁCH CÔNG TÁC\nSource: hr/travel-policy.md\nDepartment: HR\nEffective Date: 2026-01-30\nAccess: internal\n\n=== Section 1: Phạm vi ===\nÁp dụng cho tất cả chuyến công tác trong và ngoài nước.\n\n=== Section 2: Phê duyệt ===\n\n- Công tác phải được Manager approve trước",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 0
+  },
+  "chunk_0732": {
+    "content": "t ===\n\n- Công tác phải được Manager approve trước\n- Chuyến > 3 ngày cần Director approve\n\n=== Section 3: Chi phí máy bay ===\n\n- Vé máy bay: economy class\n- Khách sạn: tối đa 3 sao hoặc theo budget\n\n=== Section 4: Chi phí khách sạn ===\n\n- Trong nước: 500,000 VND/ngày\n- Quốc tế: theo từng quốc gia",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 1
+  },
+  "chunk_0733": {
+    "content": ": 500,000 VND/ngày\n- Quốc tế: theo từng quốc gia\n\n=== Section 5: Quy trình ===\n\nBước 1: Tạo travel request\nBước 2: Approval\nBước 3: Đặt vé và khách sạn\nBước 4: Hoàn ứng sau chuyến đi\n\n=== Section 6: Không hợp lệ ===\n\n- Chi phí cá nhân\n- Upgrade vé không được duyệt\n\n=== Section 7: Liên hệ ===",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 2
+  },
+  "chunk_0734": {
+    "content": "e vé không được duyệt\n\n=== Section 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 3
+  },
+  "chunk_0735": {
+    "content": "Section 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 4
+  },
+  "chunk_0736": {
+    "content": "Section 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 5
+  },
+  "chunk_0737": {
+    "content": "ection 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 6
+  },
+  "chunk_0738": {
+    "content": "ction 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 7
+  },
+  "chunk_0739": {
+    "content": "tion 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 8
+  },
+  "chunk_0740": {
+    "content": "ion 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 9
+  },
+  "chunk_0741": {
+    "content": "on 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 10
+  },
+  "chunk_0742": {
+    "content": "n 7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 11
+  },
+  "chunk_0743": {
+    "content": "7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 12
+  },
+  "chunk_0744": {
+    "content": "7: Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 13
+  },
+  "chunk_0745": {
+    "content": ": Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 14
+  },
+  "chunk_0746": {
+    "content": "Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 15
+  },
+  "chunk_0747": {
+    "content": "Liên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 16
+  },
+  "chunk_0748": {
+    "content": "iên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 17
+  },
+  "chunk_0749": {
+    "content": "ên hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 18
+  },
+  "chunk_0750": {
+    "content": "n hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 19
+  },
+  "chunk_0751": {
+    "content": "hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 20
+  },
+  "chunk_0752": {
+    "content": "hệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 21
+  },
+  "chunk_0753": {
+    "content": "ệ ===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 22
+  },
+  "chunk_0754": {
+    "content": "===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 23
+  },
+  "chunk_0755": {
+    "content": "===\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 24
+  },
+  "chunk_0756": {
+    "content": "==\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 25
+  },
+  "chunk_0757": {
+    "content": "=\nEmail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 26
+  },
+  "chunk_0758": {
+    "content": "Email: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 27
+  },
+  "chunk_0759": {
+    "content": "Email: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 28
+  },
+  "chunk_0760": {
+    "content": "mail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 29
+  },
+  "chunk_0761": {
+    "content": "ail: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 30
+  },
+  "chunk_0762": {
+    "content": "il: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 31
+  },
+  "chunk_0763": {
+    "content": "l: hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 32
+  },
+  "chunk_0764": {
+    "content": ": hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 33
+  },
+  "chunk_0765": {
+    "content": "hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 34
+  },
+  "chunk_0766": {
+    "content": "hr@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 35
+  },
+  "chunk_0767": {
+    "content": "r@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 36
+  },
+  "chunk_0768": {
+    "content": "@company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 37
+  },
+  "chunk_0769": {
+    "content": "company.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 38
+  },
+  "chunk_0770": {
+    "content": "ompany.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 39
+  },
+  "chunk_0771": {
+    "content": "mpany.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 40
+  },
+  "chunk_0772": {
+    "content": "pany.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 41
+  },
+  "chunk_0773": {
+    "content": "any.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 42
+  },
+  "chunk_0774": {
+    "content": "ny.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 43
+  },
+  "chunk_0775": {
+    "content": "y.internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 44
+  },
+  "chunk_0776": {
+    "content": ".internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 45
+  },
+  "chunk_0777": {
+    "content": "internal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 46
+  },
+  "chunk_0778": {
+    "content": "nternal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 47
+  },
+  "chunk_0779": {
+    "content": "ternal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 48
+  },
+  "chunk_0780": {
+    "content": "ernal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 49
+  },
+  "chunk_0781": {
+    "content": "rnal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 50
+  },
+  "chunk_0782": {
+    "content": "nal",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 51
+  },
+  "chunk_0783": {
+    "content": "al",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 52
+  },
+  "chunk_0784": {
+    "content": "l",
+    "source": "hr/travel-policy.md",
+    "filename": "travel_policy.txt",
+    "department": "HR",
+    "chunk_index": 53
+  },
+  "chunk_0785": {
+    "content": "CHÍNH SÁCH QUẢN LÝ NHÀ CUNG CẤP\nSource: finance/vendor-policy.md\nDepartment: Finance\nEffective Date: 2026-02-10\nAccess: internal\n\n=== Section 1: Mục đích ===\nĐảm bảo việc lựa chọn và quản lý vendor minh bạch, hiệu quả và tuân thủ quy định.\n\n=== Section 2: Phân loại vendor ===\n\nTier 1 — Strategic:",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 0
+  },
+  "chunk_0786": {
+    "content": "tion 2: Phân loại vendor ===\n\nTier 1 — Strategic:\n- Hợp đồng dài hạn\n- Giá trị lớn\n\nTier 2 — Approved:\n- Vendor thường xuyên\n\nTier 3 — One-time:\n- Mua một lần\n\n=== Section 3: Đánh giá vendor ===\n\n- Tần suất: mỗi 6 tháng\n- Tiêu chí:\n  + Giá\n  + Chất lượng\n  + SLA\n  + Support",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 1
+  },
+  "chunk_0787": {
+    "content": "chí:\n  + Giá\n  + Chất lượng\n  + SLA\n  + Support\n\n=== Section 4: Rủi ro và compliance ===\n\n- Vendor phải ký NDA nếu xử lý dữ liệu\n- Kiểm tra bảo mật với vendor IT\n\n=== Section 5: Chấm dứt hợp tác ===\n\n- Vendor vi phạm SLA > 3 lần\n- Chất lượng không đạt\n\n=== Section 6: Liên hệ ===",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 2
+  },
+  "chunk_0788": {
+    "content": "Chất lượng không đạt\n\n=== Section 6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 3
+  },
+  "chunk_0789": {
+    "content": "tion 6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 4
+  },
+  "chunk_0790": {
+    "content": "ion 6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 5
+  },
+  "chunk_0791": {
+    "content": "on 6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 6
+  },
+  "chunk_0792": {
+    "content": "n 6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 7
+  },
+  "chunk_0793": {
+    "content": "6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 8
+  },
+  "chunk_0794": {
+    "content": "6: Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 9
+  },
+  "chunk_0795": {
+    "content": ": Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 10
+  },
+  "chunk_0796": {
+    "content": "Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 11
+  },
+  "chunk_0797": {
+    "content": "Liên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 12
+  },
+  "chunk_0798": {
+    "content": "iên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 13
+  },
+  "chunk_0799": {
+    "content": "ên hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 14
+  },
+  "chunk_0800": {
+    "content": "n hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 15
+  },
+  "chunk_0801": {
+    "content": "hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 16
+  },
+  "chunk_0802": {
+    "content": "hệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 17
+  },
+  "chunk_0803": {
+    "content": "ệ ===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 18
+  },
+  "chunk_0804": {
+    "content": "===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 19
+  },
+  "chunk_0805": {
+    "content": "===\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 20
+  },
+  "chunk_0806": {
+    "content": "==\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 21
+  },
+  "chunk_0807": {
+    "content": "=\nEmail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 22
+  },
+  "chunk_0808": {
+    "content": "Email: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 23
+  },
+  "chunk_0809": {
+    "content": "Email: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 24
+  },
+  "chunk_0810": {
+    "content": "mail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 25
+  },
+  "chunk_0811": {
+    "content": "ail: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 26
+  },
+  "chunk_0812": {
+    "content": "il: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 27
+  },
+  "chunk_0813": {
+    "content": "l: vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 28
+  },
+  "chunk_0814": {
+    "content": ": vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 29
+  },
+  "chunk_0815": {
+    "content": "vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 30
+  },
+  "chunk_0816": {
+    "content": "vendor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 31
+  },
+  "chunk_0817": {
+    "content": "endor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 32
+  },
+  "chunk_0818": {
+    "content": "ndor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 33
+  },
+  "chunk_0819": {
+    "content": "dor@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 34
+  },
+  "chunk_0820": {
+    "content": "or@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 35
+  },
+  "chunk_0821": {
+    "content": "r@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 36
+  },
+  "chunk_0822": {
+    "content": "@company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 37
+  },
+  "chunk_0823": {
+    "content": "company.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 38
+  },
+  "chunk_0824": {
+    "content": "ompany.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 39
+  },
+  "chunk_0825": {
+    "content": "mpany.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 40
+  },
+  "chunk_0826": {
+    "content": "pany.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 41
+  },
+  "chunk_0827": {
+    "content": "any.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 42
+  },
+  "chunk_0828": {
+    "content": "ny.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 43
+  },
+  "chunk_0829": {
+    "content": "y.internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 44
+  },
+  "chunk_0830": {
+    "content": ".internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 45
+  },
+  "chunk_0831": {
+    "content": "internal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 46
+  },
+  "chunk_0832": {
+    "content": "nternal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 47
+  },
+  "chunk_0833": {
+    "content": "ternal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 48
+  },
+  "chunk_0834": {
+    "content": "ernal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 49
+  },
+  "chunk_0835": {
+    "content": "rnal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 50
+  },
+  "chunk_0836": {
+    "content": "nal",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 51
+  },
+  "chunk_0837": {
+    "content": "al",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 52
+  },
+  "chunk_0838": {
+    "content": "l",
+    "source": "finance/vendor-policy.md",
+    "filename": "vendor_management_policy.txt",
+    "department": "Finance",
+    "chunk_index": 53
+  }
+}
