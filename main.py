@@ -8,7 +8,8 @@ from typing import Dict, List, Optional, Tuple
 
 from dotenv import load_dotenv
 
-from agent.main_agent import MainAgent
+# Import cả V1 và V2 từ file main_agent của bạn
+from agent.main_agent import MainAgent, MainAgentV2 
 from engine.llm_judge import LLMJudge
 from engine.retrieval_eval import RetrievalEvaluator
 from engine.runner import BenchmarkRunner
@@ -98,7 +99,6 @@ class ExpertEvaluator:
         mrr = self.retrieval_eval.calculate_mrr(expected_ids, retrieved_ids)
         
         # 2. Chuẩn bị data cho Ragas (BẮT BUỘC phải là text)
-        # Giả định 'case' chứa question và 'resp' chứa answer + list các text context
         row = {
             "question": case.get("question", ""),
             "answer": resp.get("answer", ""),
@@ -332,35 +332,37 @@ def add_regression_section(
         "candidate_version": agent_version,
         "baseline_version": baseline_version,
         "delta_avg_score": round(delta, 4),
+        # Nếu V2 tốt hơn hoặc bằng V1 thì cho phép Release
         "decision": "APPROVE" if delta >= 0 else "BLOCK_RELEASE",
     }
     return summary
 
-
+# 🚀 ĐÃ SỬA: Nhận tham số `agent_instance` để biết đang chạy V1 hay V2
 async def run_benchmark_with_results(
+    agent_instance, 
     agent_version: str,
     dataset: Optional[List[Dict]] = None,
     batch_size: Optional[int] = None,
 ) -> Tuple[List[Dict], Dict]:
-    print(f"Khoi dong Benchmark cho {agent_version}...")
+    print(f"⏳ Bắt đầu thread Benchmark cho: {agent_version}")
     cases = dataset or load_dataset()
     effective_batch_size = batch_size or int(os.getenv("BATCH_SIZE", "5"))
 
     runner = BenchmarkRunner(
-        MainAgent(),
+        agent_instance, # Truyền instance vào đây (MainAgent hoặc MainAgentV2)
         ExpertEvaluator(top_k=int(os.getenv("TOP_K", "5"))),
         LLMJudge(),
         agreement_threshold=float(os.getenv("JUDGE_AGREEMENT_THRESHOLD", "0.5")),
     )
     results = await runner.run_all(cases, batch_size=effective_batch_size)
     summary = build_summary(results, agent_version)
+    print(f"✅ Đã hoàn thành Benchmark cho: {agent_version}")
     return results, summary
 
 
 async def main():
-    agent_version = os.getenv("AGENT_VERSION", "SupportAgent-v1")
+    agent_version = os.getenv("AGENT_VERSION", "SupportAgent-v2")
     baseline_version = os.getenv("BASELINE_VERSION", "SupportAgent-v1")
-    run_baseline = os.getenv("RUN_BASELINE_COMPARISON", "false").lower() == "true"
 
     try:
         dataset = load_dataset()
@@ -368,20 +370,31 @@ async def main():
         print(f"Khong the chay benchmark: {exc}")
         return
 
-    baseline_summary = None
-    if run_baseline:
-        _, baseline_summary = await run_benchmark_with_results(
-            baseline_version,
-            dataset=dataset,
-            batch_size=int(os.getenv("BATCH_SIZE", "5")),
-        )
+    batch_size = int(os.getenv("BATCH_SIZE", "5"))
+    print("\n⚡ ĐANG CHẠY BENCHMARK SONG SONG CHO CẢ V1 VÀ V2 ⚡\n")
 
-    candidate_results, candidate_summary = await run_benchmark_with_results(
-        agent_version,
+    # 🚀 TỐI ƯU HÓA ASYNC: Khởi tạo 2 Agent và gom vào asyncio.gather để chạy cùng lúc
+    agent_v1 = MainAgent()
+    agent_v2 = MainAgentV2()
+
+    task_v1 = run_benchmark_with_results(
+        agent_instance=agent_v1,
+        agent_version=baseline_version,
         dataset=dataset,
-        batch_size=int(os.getenv("BATCH_SIZE", "5")),
+        batch_size=batch_size
+    )
+    
+    task_v2 = run_benchmark_with_results(
+        agent_instance=agent_v2,
+        agent_version=agent_version,
+        dataset=dataset,
+        batch_size=batch_size
     )
 
+    # Chờ cả 2 pipeline hoàn thành đồng thời
+    (baseline_results, baseline_summary), (candidate_results, candidate_summary) = await asyncio.gather(task_v1, task_v2)
+
+    # Tổng hợp báo cáo Release Gate
     final_summary = add_regression_section(
         candidate_summary=candidate_summary,
         baseline_summary=baseline_summary,
@@ -390,32 +403,49 @@ async def main():
     )
 
     os.makedirs("reports", exist_ok=True)
+    # Lưu file report
     with open("reports/summary.json", "w", encoding="utf-8") as f:
         json.dump(final_summary, f, ensure_ascii=False, indent=2)
-    with open("reports/benchmark_results.json", "w", encoding="utf-8") as f:
+    with open("reports/benchmark_results_v2.json", "w", encoding="utf-8") as f:
         json.dump(candidate_results, f, ensure_ascii=False, indent=2)
+    with open("reports/benchmark_results_v1.json", "w", encoding="utf-8") as f:
+        json.dump(baseline_results, f, ensure_ascii=False, indent=2)
 
-    print("\nKet qua benchmark")
+    # In kết quả so sánh ra Terminal
+    print("\n" + "="*50)
+    print("📊 KẾT QUẢ SO SÁNH REGRESSION (V2 vs V1)")
+    print("="*50)
+    
     total_cases = final_summary["metadata"]["total"]
-    pass_count = sum(1 for r in candidate_results if r.get("status") == "pass")
-    fail_count = sum(1 for r in candidate_results if r.get("status") == "fail")
-    metrics = final_summary["metrics"]
+    metrics_v2 = final_summary["metrics"]
+    metrics_v1 = baseline_summary["metrics"]
 
-    print(f"- Tong so cases: {total_cases}")
-    print(f"- Ti le Pass/Fail: {pass_count}/{fail_count}")
-    print("- Diem RAGAS trung binh:")
-    print(f"    - Faithfulness: {metrics['avg_faithfulness']:.2f}")
-    print(f"    - Relevancy: {metrics['avg_relevancy']:.2f}")
-    print(f"- Diem LLM-Judge trung binh: {metrics['avg_score']:.1f} / 5.0")
-    print(f"Avg score: {metrics['avg_score']:.4f}")
-    print(f"Hit rate: {metrics['hit_rate']:.4f}")
-    print(f"MRR: {metrics['avg_mrr']:.4f}")
-    print(f"Agreement rate: {metrics['agreement_rate']:.4f}")
-    print(f"Conflict rate: {metrics['conflict_rate']:.4f}")
+    print(f"📌 Tổng số Test Cases: {total_cases}")
+    print("\n1️⃣ ĐÁNH GIÁ TỪ LLM JUDGE (Điểm tổng thể)")
+    print(f"   - Score V2: {metrics_v2['avg_score']:.2f}")
+    print(f"   - Score V1: {metrics_v1['avg_score']:.2f}")
+    print(f"   - Mức độ đồng thuận của Judge: {metrics_v2['agreement_rate']:.2f} (Kappa)")
+    
+    print("\n2️⃣ RAGAS METRICS (Chất lượng nội dung)")
+    print(f"   - Faithfulness V2: {metrics_v2['avg_faithfulness']:.2f}  |  V1: {metrics_v1['avg_faithfulness']:.2f}")
+    print(f"   - Relevancy V2:    {metrics_v2['avg_relevancy']:.2f}  |  V1: {metrics_v1['avg_relevancy']:.2f}")
+    
+    print("\n3️⃣ RETRIEVAL METRICS (Chất lượng Vector DB)")
+    print(f"   - Hit Rate V2:     {metrics_v2['hit_rate']:.4f}  |  V1: {metrics_v1['hit_rate']:.4f}")
+    print(f"   - MRR V2:          {metrics_v2['avg_mrr']:.4f}  |  V1: {metrics_v1['avg_mrr']:.4f}")
 
+    print("\n" + "-"*50)
     regression = final_summary.get("regression", {})
-    if regression.get("decision"):
-        print(f"Regression decision: {regression['decision']}")
+    decision = regression.get('decision', 'N/A')
+    delta = regression.get('delta_avg_score', 0)
+    
+    if decision == "APPROVE":
+        print(f"✅ QUYẾT ĐỊNH HỆ THỐNG: {decision}")
+        print(f"🎉 Agent V2 hoạt động tốt hơn (hoặc bằng) V1 (+{delta:.2f} điểm). Cho phép Release lên Production!")
+    else:
+        print(f"❌ QUYẾT ĐỊNH HỆ THỐNG: {decision}")
+        print(f"⚠️ Agent V2 gây lỗi hồi quy ({delta:.2f} điểm). Chặn Release, giữ lại V1!")
+    print("-"*50 + "\n")
 
 
 if __name__ == "__main__":
