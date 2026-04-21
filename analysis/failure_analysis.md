@@ -2,7 +2,7 @@
 
 ## 1. Tổng quan Benchmark
 
-- **Tổng số cases:** 50
+- **Tổng số cases:** 55
 - **Tỉ lệ Pass/Fail:** 32/23
 - **Điểm RAGAS trung bình:**
   - Faithfulness: 0.1194
