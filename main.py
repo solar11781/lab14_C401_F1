@@ -5,6 +5,7 @@ import time
 from engine.runner import BenchmarkRunner
 from engine.retrieval_eval import RetrievalEvaluator
 from agent.main_agent import MainAgent
+from ragas.metrics import faithfulness, answer_relevancy
 
 # Giả lập các components Expert
 class ExpertEvaluator:
@@ -13,21 +14,31 @@ class ExpertEvaluator:
     
     async def score(self, case, resp): 
         """
-        Score: Tính Hit Rate & MRR từ Agent response.
-        case: test case từ golden_set.jsonl
-        resp: agent response từ MainAgent.query()
+        Score: Tính Hit Rate, MRR, Faithfulness, Relevancy.
         """
-        # Map ground_truth_ids -> expected_retrieval_ids
+        # 1. Tính toán Retrieval Metrics (dựa trên ID)
         expected_ids = case.get("ground_truth_ids", [])
         retrieved_ids = resp.get("retrieved_ids", [])
         
-        # Tính Hit Rate & MRR
         hit_rate = self.retrieval_eval.calculate_hit_rate(expected_ids, retrieved_ids)
         mrr = self.retrieval_eval.calculate_mrr(expected_ids, retrieved_ids)
         
+        # 2. Chuẩn bị data cho Ragas (BẮT BUỘC phải là text)
+        # Giả định 'case' chứa question và 'resp' chứa answer + list các text context
+        row = {
+            "question": case.get("question", ""),
+            "answer": resp.get("answer", ""),
+            "contexts": resp.get("retrieved_texts", []) # Ragas cần nội dung text, không phải ID
+        }
+        
+        # 3. Tính toán Generation Metrics bằng Ragas (gọi LLM)
+        # Sử dụng ascore() để chạy async, tránh block event loop
+        faithfulness_score = await faithfulness.ascore(row)
+        relevancy_score = await answer_relevancy.ascore(row)
+        
         return {
-            "faithfulness": 0.9,
-            "relevancy": 0.8,
+            "faithfulness": faithfulness_score,
+            "relevancy": relevancy_score,
             "retrieval": {
                 "hit_rate": hit_rate, 
                 "mrr": mrr
