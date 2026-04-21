@@ -73,13 +73,20 @@ class RetrievalEvaluator:
                 return 1.0 / (i + 1)  # i+1 vì vị trí 1-indexed
         return 0.0
 
+    def _extract_expected_ids(self, case: Dict) -> List[str]:
+        """
+        Hỗ trợ cả tên field cũ lẫn field hiện tại trong golden_set.jsonl.
+        Ưu tiên `ground_truth_ids`, fallback sang `expected_retrieval_ids`.
+        """
+        return case.get("ground_truth_ids", []) or case.get("expected_retrieval_ids", [])
+
     async def evaluate_batch(self, dataset: List[Dict]) -> Dict:
         """
         Chạy eval cho toàn bộ bộ dữ liệu.
         
         Args:
             dataset: Danh sách các test case. Mỗi case cần có:
-                - expected_retrieval_ids: List[str] - IDs của tài liệu ground truth
+                - ground_truth_ids hoặc expected_retrieval_ids: List[str] - IDs của tài liệu ground truth
                 - retrieved_ids: List[str] - IDs của tài liệu được retrieve (của Agent)
                 - question (optional): Câu hỏi, để debug
                 
@@ -108,7 +115,7 @@ class RetrievalEvaluator:
 
         for idx, case in enumerate(dataset):
             # Validate required fields
-            expected_ids = case.get("expected_retrieval_ids", [])
+            expected_ids = self._extract_expected_ids(case)
             retrieved_ids = case.get("retrieved_ids", [])
             
             if not expected_ids:
