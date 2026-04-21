@@ -13,15 +13,18 @@ from typing import List, Dict
 
 import chromadb
 from chromadb.utils import embedding_functions
+from chromadb.errors import NotFoundError
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-DB_DIR          = Path(__file__).parent.parent / "data" / "chroma_db"
-COLLECTION_NAME = "internal_docs"
-OPENAI_API_KEY  = os.getenv("OPENAI_API_KEY", "")
-TOP_K           = 5   # số chunks retrieve mỗi query
+DB_DIR = Path(os.getenv("CHROMA_DB_PATH", str(Path(__file__).parent.parent / "data" / "chroma_db")))
+COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", "internal_docs")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+GENERATION_MODEL = os.getenv("GENERATION_MODEL", "gpt-4o-mini")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+TOP_K = int(os.getenv("TOP_K", "5"))
 
 
 class MainAgent:
@@ -46,15 +49,18 @@ class MainAgent:
         if OPENAI_API_KEY:
             ef = embedding_functions.OpenAIEmbeddingFunction(
                 api_key=OPENAI_API_KEY,
-                model_name="text-embedding-3-small"
+                model_name=EMBEDDING_MODEL
             )
         else:
             ef = embedding_functions.DefaultEmbeddingFunction()
 
-        self._collection = client.get_collection(
-            name=COLLECTION_NAME,
-            embedding_function=ef
-        )
+        try:
+            self._collection = client.get_collection(
+                name=COLLECTION_NAME,
+                embedding_function=ef
+            )
+        except NotFoundError:
+            self._collection = None
         return self._collection
 
     # ─────────────────────────────────────────
@@ -70,6 +76,14 @@ class MainAgent:
         }
         """
         collection = self._get_collection()
+        if collection is None:
+            return {
+                "retrieved_ids": [],
+                "retrieved_context": [],
+                "contexts": [],
+                "sources": [],
+            }
+
         results = collection.query(
             query_texts=[question],
             n_results=top_k,
@@ -82,6 +96,7 @@ class MainAgent:
 
         return {
             "retrieved_ids": ids,
+            "retrieved_context": documents,
             "contexts"     : documents,
             "sources"      : [m.get("filename", "unknown") for m in metadatas],
         }
@@ -115,7 +130,7 @@ class MainAgent:
         )
 
         response = await self._llm.chat.completions.create(
-            model="gpt-4o-mini",
+            model=GENERATION_MODEL,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user"  , "content": user_prompt},
@@ -128,7 +143,7 @@ class MainAgent:
 
         return {
             "answer"      : answer,
-            "model"       : "gpt-4o-mini",
+            "model"       : GENERATION_MODEL,
             "tokens_used" : tokens_used,
         }
 
@@ -156,6 +171,7 @@ class MainAgent:
         return {
             "answer"       : gen["answer"],
             "retrieved_ids": retrieval["retrieved_ids"],
+            "retrieved_context": retrieval["retrieved_context"],
             "contexts"     : retrieval["contexts"],
             "sources"      : retrieval["sources"],
             "metadata"     : {
