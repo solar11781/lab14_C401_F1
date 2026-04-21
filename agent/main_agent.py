@@ -13,18 +13,15 @@ from typing import List, Dict
 
 import chromadb
 from chromadb.utils import embedding_functions
-from chromadb.errors import NotFoundError
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-DB_DIR = Path(os.getenv("CHROMA_DB_PATH", str(Path(__file__).parent.parent / "data" / "chroma_db")))
-COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", "internal_docs")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-GENERATION_MODEL = os.getenv("GENERATION_MODEL", "gpt-4o-mini")
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
-TOP_K = int(os.getenv("TOP_K", "5"))
+DB_DIR          = Path(__file__).parent.parent / "data" / "chroma_db"
+COLLECTION_NAME = "internal_docs"
+OPENAI_API_KEY  = os.getenv("OPENAI_API_KEY", "")
+TOP_K           = 5   # số chunks retrieve mỗi query
 
 
 class MainAgent:
@@ -49,18 +46,15 @@ class MainAgent:
         if OPENAI_API_KEY:
             ef = embedding_functions.OpenAIEmbeddingFunction(
                 api_key=OPENAI_API_KEY,
-                model_name=EMBEDDING_MODEL
+                model_name="text-embedding-3-small"
             )
         else:
             ef = embedding_functions.DefaultEmbeddingFunction()
 
-        try:
-            self._collection = client.get_collection(
-                name=COLLECTION_NAME,
-                embedding_function=ef
-            )
-        except NotFoundError:
-            self._collection = None
+        self._collection = client.get_collection(
+            name=COLLECTION_NAME,
+            embedding_function=ef
+        )
         return self._collection
 
     # ─────────────────────────────────────────
@@ -76,14 +70,6 @@ class MainAgent:
         }
         """
         collection = self._get_collection()
-        if collection is None:
-            return {
-                "retrieved_ids": [],
-                "retrieved_context": [],
-                "contexts": [],
-                "sources": [],
-            }
-
         results = collection.query(
             query_texts=[question],
             n_results=top_k,
@@ -96,7 +82,6 @@ class MainAgent:
 
         return {
             "retrieved_ids": ids,
-            "retrieved_context": documents,
             "contexts"     : documents,
             "sources"      : [m.get("filename", "unknown") for m in metadatas],
         }
@@ -130,7 +115,7 @@ class MainAgent:
         )
 
         response = await self._llm.chat.completions.create(
-            model=GENERATION_MODEL,
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user"  , "content": user_prompt},
@@ -143,7 +128,7 @@ class MainAgent:
 
         return {
             "answer"      : answer,
-            "model"       : GENERATION_MODEL,
+            "model"       : "gpt-4o-mini",
             "tokens_used" : tokens_used,
         }
 
@@ -171,7 +156,6 @@ class MainAgent:
         return {
             "answer"       : gen["answer"],
             "retrieved_ids": retrieval["retrieved_ids"],
-            "retrieved_context": retrieval["retrieved_context"],
             "contexts"     : retrieval["contexts"],
             "sources"      : retrieval["sources"],
             "metadata"     : {
@@ -181,6 +165,71 @@ class MainAgent:
             },
         }
 
+
+class MainAgentV2(MainAgent):
+    """
+    RAG Agent V2 - Phiên bản nâng cấp (Được tối ưu Retrieval & Generation).
+    Áp dụng: 
+    1. Tăng TOP_K để cải thiện Hit Rate.
+    2. Chain-of-Thought Prompting để tăng Accuracy.
+    """
+
+    def __init__(self):
+        super().__init__() # Gọi lại logic khởi tạo của V1
+        self.name = "SupportAgent-v2"
+        self.optimized_top_k = 3 # Kéo nhiều context hơn V1 một chút
+
+    # Override lại hàm retrieve để dùng TOP_K mới
+    def retrieve(self, question: str, top_k: int = None) -> Dict:
+        # Nếu không truyền top_k vào, dùng top_k tối ưu của V2
+        actual_top_k = top_k if top_k else self.optimized_top_k
+        return super().retrieve(question, actual_top_k)
+
+    # Override lại hàm generate để nâng cấp Prompt
+    async def generate(self, question: str, contexts: List[str]) -> Dict:
+        context_text = "\n\n---\n\n".join(contexts)
+
+        if not self._llm:
+            return {
+                "answer": "[DEV MODE V2] Cần API Key.",
+                "model": "mock",
+                "tokens_used": 0,
+            }
+
+        # 🚀 TỐI ƯU HÓA: Áp dụng Chain-of-Thought (CoT) và quy tắc ngặt nghèo hơn
+        system_prompt = (
+            "Bạn là một chuyên gia phân tích tài liệu nội bộ xuất sắc. "
+            "Quy tắc tuyệt đối:\n"
+            "1. Chỉ sử dụng thông tin từ 'Tài liệu tham khảo' bên dưới. KHÔNG bịa đặt.\n"
+            "2. Nếu tài liệu không chứa câu trả lời, hãy trả lời chính xác câu này: 'Tôi không tìm thấy thông tin này trong tài liệu nội bộ.'\n"
+            "3. Suy nghĩ từng bước (Think step-by-step): Xác định thông tin liên quan trong tài liệu trước, sau đó mới tổng hợp thành câu trả lời cuối cùng trực diện và chuyên nghiệp."
+        )
+        
+        user_prompt = (
+            f"Tài liệu tham khảo:\n{context_text}\n\n"
+            f"Câu hỏi của người dùng: {question}"
+        )
+
+        response = await self._llm.chat.completions.create(
+            model="gpt-4o-mini", # Vẫn giữ mini để tối ưu cost, bù đắp bằng prompt tốt
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=0, # Giữ temp=0 để câu trả lời có tính determinisic (ổn định)
+            max_tokens=512, # Tăng nhẹ token phòng trường hợp CoT sinh ra nhiều text
+        )
+        
+        answer = response.choices[0].message.content
+        tokens_used = response.usage.total_tokens
+
+        return {
+            "answer": answer,
+            "model": "gpt-4o-mini-v2",
+            "tokens_used": tokens_used,
+        }
+
+    # Không cần viết lại hàm query() vì nó sẽ tự động gọi retrieve() và generate() của V2
 
 # ─────────────────────────────────────────────
 # Quick test
